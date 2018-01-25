@@ -34,3 +34,11 @@ def bubbleplot():
     Serve up the bubble plot
     """
     return render_template('gallery/bubbleplot/bubbleplot.html')
+
+
+@app.route('/gallery/surf3Dtime')
+def surf3Dtime():
+    """
+    Serve up the surf3Dtime viz
+    """
+    return render_template('gallery/surf3Dtime/surf3Dtime.html')
