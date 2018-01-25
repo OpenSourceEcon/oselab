@@ -2,8 +2,8 @@
 Open Source Macroeconomics Lab Webpage built in Flask
 
 ### TODO
-- [ ] Render HTML for Bokeh visualizations
-- [ ] Set up routes to visualizations
+- [x] Render HTML for Bokeh visualizations
+- [x] Set up routes to visualizations
 - [ ] Create footer for layout
 - [ ] Style homepage
 - [ ] Write README for future contributors
