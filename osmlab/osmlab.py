@@ -42,3 +42,11 @@ def surf3Dtime():
     Serve up the surf3Dtime viz
     """
     return render_template('gallery/surf3Dtime/surf3Dtime.html')
+
+
+@app.route('/gallery/increase-decrease')
+def increase_decrease():
+    """
+    Serve up the increase-decrease viz
+    """
+    return render_template('gallery/increase-decrease/increase-decrease.html')

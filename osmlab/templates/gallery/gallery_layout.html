@@ -4,7 +4,7 @@
   <title>Open Source Macroeconomic Laboratory</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
     rel="stylesheet" />
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='gallery/style.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
   <link rel="shortcut icon" href="{{ url_for('static', filename='shared/favicon.ico') }}">
 
   <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css" />
@@ -15,6 +15,26 @@
   <script type="text/javascript">
       Bokeh.set_log_level("info");
   </script>
+
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+
+    .increase-decrease {
+      margin-left: 30%;
+    }
+
+    .surf3Dtime {
+      margin-left: 5%;
+    }
+
+    .bubbleplot {
+      margin-left: 15%;
+    }
+
+  </style>
+
 </head>
 
 <html>
