@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1 class="text-center"> Open Source Macroeconomics Laboratory Visualizations Gallery</h1>
+
+<div class="row">
+  <a class="feature col-md-6 col-md-offset-3" href="/surf3Dtime">
+    <div class="row">
+      <div class="feature-picture col-md-4">
+        <img class="img-responsive" src="{{ url_for('static', filename='gallery/surf3Dtime.png') }}"/>
+      </div>
+      <div class="feature-article col-md-8">
+        <h2>Overlapping Generations Model</h2>
+        <hr>
+        <p>Explore various aggregate and individual macroeconomic variables over time with both 3D and 2D plots.</p>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="row">
+  <a class="feature col-md-6 col-md-offset-3" href="/bubbleplot">
+    <div class="row">
+      <div class="feature-picture col-md-4">
+        <img class="img-responsive" src="{{ url_for('static', filename='gallery/bubbleplot.png') }}"/>
+      </div>
+      <div class="feature-article col-md-8">
+        <h2>Marginal Effective Tax Rates on Corporate Investments</h2>
+        <hr>
+        <p>Explore the effects of tax reforms on corporate investments in equipment and structure assets.</p>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="row">
+  <a class="feature col-md-6 col-md-offset-3" href="/increase_decrease">
+    <div class="row">
+      <div class="feature-picture col-md-4">
+        <img class="img-responsive" src="{{ url_for('static', filename='gallery/increase-decrease.png') }}"/>
+      </div>
+      <div class="feature-article col-md-8">
+        <h2>Tax Increase vs. Tax Decrease</h2>
+        <hr>
+        <p>Explore the changes units with tax cuts or tax increases by income over a span of 10 years.</p>
+      </div>
+    </div>
+  </a>
+</div>
+
+{% endblock %}
