@@ -26,3 +26,11 @@ def gallery():
     Serve up the gallery page
     """
     return render_template('gallery/gallery.html')
+
+
+@app.route('/gallery/bubble-plot')
+def bubbleplot():
+    """
+    Serve up the bubble plot
+    """
+    return render_template('gallery/bubbleplot/bubbleplot.html')

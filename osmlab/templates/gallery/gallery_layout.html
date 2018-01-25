@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Open Source Macroeconomic Laboratory</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    rel="stylesheet" />
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='shared/favicon.ico') }}">
+
+  <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.css" type="text/css" />
+
+  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
+  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.js"></script>
+  <script type="text/javascript">
+      Bokeh.set_log_level("info");
+  </script>
+</head>
+
+<html>
+  <body>
+
+    <nav class="navbar navbar-default og-navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='shared/osm-icon.png') }}"/>
+          </a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="navbar-brand" target="_blank" href="https://github.com/OpenSourceMacro/OGvisualizations">
+              <img src="{{ url_for('static', filename='shared/github-icon.png') }}"/>
+            </a>
+          </li>
+          <li>
+            <a class="navbar-brand" target="_blank" href="https://twitter.com/OpenSourceMacro">
+              <img src="{{ url_for('static', filename='shared/twitter-icon.png') }}"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    {% block body %}{% endblock %}
+
+  </body>
+</html>
