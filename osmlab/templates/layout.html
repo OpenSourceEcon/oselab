@@ -21,6 +21,18 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/bootcamp">Boot Camp</a>
+          </li>
+          <li>
+            <a href="/gallery">Gallery</a>
+          </li>
+          <li>
+            <a href="/open-source">Open Source Projects</a>
+          </li>
+          <li>
             <a class="navbar-brand" target="_blank" href="https://github.com/OpenSourceMacro/OGvisualizations">
               <img src="{{ url_for('static', filename='shared/github-icon.png') }}"/>
             </a>
@@ -35,6 +47,12 @@
     </nav>
 
     {% block body %}{% endblock %}
+
+    <footer class="fixed_footer">
+      <div class="content">
+        <h3>Open Source Macroeconomics Laboratory</h3>
+      </div>
+    </footer>
 
   </body>
 </html>
