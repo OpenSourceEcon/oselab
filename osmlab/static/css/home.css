@@ -1,0 +1,28 @@
+.home-header {
+  display: flex;
+  height: calc(100vh - 60px);
+  margin-top: -60px;
+}
+
+.home-header__brand {
+  display: flex;
+  flex: 0 0 45%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px 0 80px;
+}
+
+.home-header__brand__description {
+  color: #75140C;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.10px;
+  line-height: 26px;
+  max-width: 450px;
+  padding-top: 20px;
+}
+
+.home-header__slideshow {
+  background: #75140C;
+  flex: 0 0 55%;
+}

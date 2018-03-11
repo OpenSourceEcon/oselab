@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home.css') }}">
+
+<div class="home-header">
+  <div class="home-header__brand">
+    <div>
+      <img src="{{ url_for('static', filename='images/osm_lab_logo.png') }}" />
+    </div>
+    <h2 class="home-header__brand__description">
+        The Open Source Macroeconomics Laboratory (OSM Lab) at the University of Chicago
+        provides training and supports macroeconomic research and open source methods.
+    </h2>
+  </div>
+  <div class="home-header__slideshow">
+    sliideshow
+  </div>
+</div>
+{% endblock %}
