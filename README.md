@@ -1,5 +1,13 @@
 # osmlab
-Open Source Macroeconomics Lab Webpage built in Flask
+
+Open Source Macroeconomics Lab Webpage built in [Flask](http://flask.pocoo.org).
+
+## Getting started
+
+* `$ pip install -e .`
+* `$ bin/start`
+
+The app will run locally at `localhost:5000`.
 
 ### TODO
 - [x] Render HTML for Bokeh visualizations
