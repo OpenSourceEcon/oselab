@@ -7,7 +7,7 @@ def homepage():
     """
     Shows the user the homepage
     """
-    return render_template('index.html')
+    return render_template('home.html')
 
 
 @app.route('/gallery')

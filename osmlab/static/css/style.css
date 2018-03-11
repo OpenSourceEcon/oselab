@@ -1,0 +1,15 @@
+body {
+  background: #fff;
+  font-family: Roboto, Helvetica, Arial, sans;
+}
+
+.osm-nav {
+  z-index: 10;
+}
+
+.osm-nav-item {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
