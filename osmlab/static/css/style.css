@@ -1,6 +1,9 @@
 body {
   background: #fff;
+  color: #2B2B2B;
   font-family: Roboto, Helvetica, Arial, sans;
+  margin: auto;
+  max-width: 1440px;
 }
 
 .osm-nav {

@@ -27,3 +27,68 @@
   background: #ddd;
   flex: 0 0 55%;
 }
+
+.latest-section {
+  background: #F7F7FA;
+  padding: 75px 80px;
+}
+
+.latest-section__heading {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.38px;
+  margin-bottom: 30px;
+}
+
+.latest-section__cards-container {
+  display: flex;
+}
+
+.latest-section__card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 0 0 calc(33.333% - 10px);
+  margin-right: 15px;
+  padding: 33px;
+}
+
+.latest-section__card:last-of-type {
+  margin-right: 0;
+}
+
+.latest-section__card__heading {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  margin: 0;
+}
+
+.latest-section__card__body-content {
+  font-size: 14px;
+  letter-spacing: 0.22px;
+  line-height: 22px;
+  margin: 14px 0 0;
+}
+
+.latest-section__card__link {
+  color: #2B2B2B;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.latest-section__card__link:hover {
+  color: #75140C;
+  text-decoration: none;
+}
+
+.latest-section__card__arrow {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 16px;
+  transition: transform 0.15s;
+}
+
+.latest-section__card__link:hover .latest-section__card__arrow {
+  transform: translate3d(3px, 0, 0);
+}
