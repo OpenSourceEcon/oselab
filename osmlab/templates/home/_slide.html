@@ -1,0 +1,11 @@
+{% macro slide(title, background_image, body, cover_color='red') -%}
+  <div
+    class="home-header__slide home-header__slide--{{cover_color}}"
+    style="background-image: url('{{ background_image }}');"
+  >
+    <div class="home-header__slide__content">
+      <h3 class="home-header__slide__title">{{ title }}</h3>
+      <p>{{ body }}</p>
+    </div>
+  </div>
+{%- endmacro %}

@@ -28,6 +28,54 @@
   flex: 0 0 55%;
 }
 
+.home-header__slide {
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100%;
+  padding: 0 80px;
+  position: relative;
+  width: 100%;
+}
+
+.home-header__slide:before {
+  bottom: 0;
+  content: " ";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.home-header__slide--transparent:before {
+  background: transparent;
+}
+
+.home-header__slide--red {
+  color: white;
+}
+
+.home-header__slide--red:before {
+  background: #75140C;
+  opacity: 0.5;
+}
+
+.home-header__slide__content {
+  max-width: 450px;
+  z-index: 1;
+}
+
+.home-header__slide__title {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  margin-bottom: 20px;
+}
+
 .latest-section {
   background: #F7F7FA;
   padding: 75px 80px;
