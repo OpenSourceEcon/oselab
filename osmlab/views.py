@@ -1,6 +1,10 @@
 from flask import render_template
 from osmlab import app
+from datetime import datetime
 
+@app.context_processor
+def inject_view_helpers():
+    return {'now': datetime.utcnow()}
 
 @app.route('/')
 def homepage():
