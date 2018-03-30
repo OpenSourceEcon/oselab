@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
+
+{% from 'home/_home_card.html' import home_card %}
+
 {% block body %}
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home/index.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home/_home_card.css') }}">
 
 <div class="home-header">
   <div class="home-header__brand">
@@ -22,47 +26,41 @@
     <h3 class="latest-section__heading">Latest from OSM Lab</h3>
 
     <div class="latest-section__cards-container">
-      <div class="latest-section__card">
-        <h4 class="latest-section__card__heading">OSM boot camp 2018</h4>
-        <p class="latest-section__card__body-content">
+      {{
+        home_card(
+          title="OSM boot camp 2018",
+          body="""
             Applications for the 2018 OSM lab bootcamp are open and applicants can apply
             at any time. We are happy to announce new scholarships this year and are excited
             to read a lot of neat applications like the ones that...
-        </p>
-        <p class="latest-section__card__body-content">
-          <a href="#" class="latest-section__card__link">
-            Continue reading <span class="latest-section__card__arrow">&rarr;</span>
-          </a>
-        </p>
-      </div>
+          """,
+          url="#"
+        )
+      }}
 
-      <div class="latest-section__card">
-        <h4 class="latest-section__card__heading">OSM boot camp 2018</h4>
-        <p class="latest-section__card__body-content">
+      {{
+        home_card(
+          title="OSM boot camp 2018",
+          body="""
             Applications for the 2018 OSM lab bootcamp are open and applicants can apply
             at any time. We are happy to announce new scholarships this year and are excited
             to read a lot of neat applications like the ones that...
-        </p>
-        <p class="latest-section__card__body-content">
-          <a href="#" class="latest-section__card__link">
-            Continue reading <span class="latest-section__card__arrow">&rarr;</span>
-          </a>
-        </p>
-      </div>
+          """,
+          url="#"
+        )
+      }}
 
-      <div class="latest-section__card">
-        <h4 class="latest-section__card__heading">OSM boot camp 2018</h4>
-        <p class="latest-section__card__body-content">
+      {{
+        home_card(
+          title="OSM boot camp 2018",
+          body="""
             Applications for the 2018 OSM lab bootcamp are open and applicants can apply
             at any time. We are happy to announce new scholarships this year and are excited
             to read a lot of neat applications like the ones that...
-        </p>
-        <p class="latest-section__card__body-content">
-          <a href="#" class="latest-section__card__link">
-            Continue reading <span class="latest-section__card__arrow">&rarr;</span>
-          </a>
-        </p>
-      </div>
+          """,
+          url="#"
+        )
+      }}
     </div>
   </div>
 </div>
