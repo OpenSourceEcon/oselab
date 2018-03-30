@@ -2,6 +2,7 @@
   display: flex;
   height: calc(100vh - 60px);
   margin-top: -60px;
+  min-height: 450px;
 }
 
 .home-header__brand {
@@ -15,14 +16,14 @@
 .home-header__brand__description {
   color: #75140C;
   font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.10px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
   line-height: 26px;
   max-width: 450px;
   padding-top: 20px;
 }
 
 .home-header__slideshow {
-  background: #75140C;
+  background: #ddd;
   flex: 0 0 55%;
 }
