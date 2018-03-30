@@ -13,7 +13,7 @@
 <html>
   <body>
 
-    <nav class="navbar container-fluid navbar-expand-lg navbar-light osm-nav">
+    <nav class="navbar container navbar-expand-lg navbar-light osm-nav">
       <a class="navbar-brand" href="/">
         <img src="{{ url_for('static', filename='images/osm_lab_wordmark.png') }}"/>
       </a>
@@ -36,6 +36,37 @@
     </nav>
 
     {% block body %}{% endblock %}
+
+    <footer class="osm-footer">
+      <div class="container">
+
+        <img
+          alt="University of Chicago"
+          class="img-fluid"
+          src="{{ url_for('static', filename='images/chicago_wordmark.svg') }}"
+        />
+
+        <div class="osm-footer__icons-container">
+          <a href="https://twitter.com/OpenSourceMacro" target="_blank">
+            <img
+              alt="OSM Lab on Twitter"
+              class="osm-footer__icon"
+              src="{{ url_for('static', filename='images/twitter_icon.svg') }}"
+            />
+          </a>
+
+          <a href="https://github.com/OpenSourceMacro" target="_blank">
+            <img
+              alt="OSM Lab on GitHub"
+              class="osm-footer__icon"
+              src="{{ url_for('static', filename='images/github_icon.svg') }}"
+            />
+          </a>
+        </div>
+
+        <p class="osm-footer__subtext"><small>&copy; {{ now.year }} The University of Chicago</small></p>
+      </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

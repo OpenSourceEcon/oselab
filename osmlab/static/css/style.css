@@ -2,7 +2,9 @@ body {
   background: #fff;
   color: #2B2B2B;
   font-family: Roboto, Helvetica, Arial, sans;
-  margin: auto;
+}
+
+.container {
   max-width: 1440px;
 }
 
@@ -15,4 +17,24 @@ body {
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.osm-footer {
+  background: #75140C;
+  color: #fff;
+  padding: 100px 120px 80px;
+}
+
+.osm-footer__icons-container {
+  margin: 25px 0 20px 0;
+}
+
+.osm-footer__icon {
+  margin-right: 10px;
+  width: 28px;
+}
+
+.osm-footer__subtext {
+  letter-spacing: 0.2px;
+  opacity: 0.6;
 }
