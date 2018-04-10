@@ -26,6 +26,8 @@
 .home-header__slideshow {
   background: #ddd;
   flex: 0 0 55%;
+  overflow: hidden;
+  display: flex;
 }
 
 .latest-section {
