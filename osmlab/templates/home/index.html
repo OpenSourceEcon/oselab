@@ -1,11 +1,13 @@
 {% extends "layout.html" %}
 
 {% from 'home/_home_card.html' import home_card %}
-{% from 'home/_slide.html' import slide %}
+{% from 'home/_home_slide.html' import slide %}
 
 {% block body %}
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home/index.css') }}">
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home/_home_card.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home/_home_slide.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/home/slideshow.js') }}"></script>
 
 <div class="home-header">
   <div class="home-header__brand">
@@ -26,6 +28,18 @@
           macroeconomics boot camp.
         """,
         background_image=url_for('static', filename='images/student.jpg')
+      )
+    }}
+
+    {{
+      slide(
+        title="OSM Lab Boot Camp",
+        body="""
+          The OSM Boot Camp is an intensive and immersive seven-week computational
+          macroeconomics boot camp.
+        """,
+        background_image=url_for('static', filename='images/student.jpg'),
+        cover_color="blue"
       )
     }}
   </div>
