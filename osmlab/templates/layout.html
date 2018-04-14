@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+{% from 'components/_home_card.html' import home_card %}
+{% from 'components/_home_slide.html' import home_slide %}
+{% from 'components/page_heading.html' import page_heading %}
 
+<!DOCTYPE html>
 <head>
   <title>Open Source Macroeconomic Laboratory</title>
 
@@ -10,6 +13,12 @@
 
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/global.css') }}">
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/layout.css') }}">
+
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home/index.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/components/_home_card.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/components/_home_slide.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/components/page_heading.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='javascript/home/slideshow.js') }}"></script>
 </head>
 
 <html>
