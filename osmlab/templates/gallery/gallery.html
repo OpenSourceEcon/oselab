@@ -1,53 +1,58 @@
 {% extends "layout.html" %}
+
 {% block body %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/gallery/index.css') }}">
 
-<div class="content">
-<h1 class="text-center"> Open Source Macroeconomics Laboratory Visualizations Gallery</h1>
-
-<div class="row">
-  <a class="feature col-md-6 col-md-offset-3" href="/gallery/surf3Dtime">
-    <div class="row">
-      <div class="feature-picture col-md-4">
-        <img class="img-responsive" src="{{ url_for('static', filename='gallery/surf3Dtime.png') }}"/>
-      </div>
-      <div class="feature-article col-md-8">
-        <h2>Overlapping Generations Model</h2>
-        <hr>
-        <p>Explore various aggregate and individual macroeconomic variables over time with both 3D and 2D plots.</p>
-      </div>
-    </div>
-  </a>
+<div class="container py-4">
+  <h1>Visualizations Gallery</h1>
 </div>
 
-<div class="row">
-  <a class="feature col-md-6 col-md-offset-3" href="/gallery/bubble-plot">
-    <div class="row">
-      <div class="feature-picture col-md-4">
-        <img class="img-responsive" src="{{ url_for('static', filename='gallery/bubbleplot.png') }}"/>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="gallery-item py-4">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <img src="{{ url_for('static', filename='images/surf3Dtime.png') }}" class="img-fluid">
+          </div>
+          <div class="col-md-9 col-6">
+            <h2>Overlapping Generations Model</h2>
+            <hr>
+            <p>Explore various aggregate and individual macroeconomic variables over time with both 3D and 2D plots.</p>
+            <a href="/gallery/surf3Dtime">Look at it</a>
+          </div>
+        </div>
       </div>
-      <div class="feature-article col-md-8">
-        <h2>Marginal Effective Tax Rates on Corporate Investments</h2>
-        <hr>
-        <p>Explore the effects of tax reforms on corporate investments in equipment and structure assets.</p>
-      </div>
-    </div>
-  </a>
-</div>
 
-<div class="row">
-  <a class="feature col-md-6 col-md-offset-3" href="/gallery/increase-decrease">
-    <div class="row">
-      <div class="feature-picture col-md-4">
-        <img class="img-responsive" src="{{ url_for('static', filename='gallery/increase-decrease.png') }}"/>
+      <div class="gallery-item py-4">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <img src="{{ url_for('static', filename='images/bubbleplot.png') }}" class="img-fluid">
+          </div>
+          <div class="col-md-9 col-6">
+            <h2>Marginal Effective Tax Rates on Corporate Investments</h2>
+            <hr>
+            <p>Explore the effects of tax reforms on corporate investments in equipment and structure assets.</p>
+            <a href="/gallery/bubble-plot">Look at it</a>
+          </div>
+        </div>
       </div>
-      <div class="feature-article col-md-8">
-        <h2>Tax Increase vs. Tax Decrease</h2>
-        <hr>
-        <p>Explore the changes units with tax cuts or tax increases by income over a span of 10 years.</p>
+
+      <div class="gallery-item py-4">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <img src="{{ url_for('static', filename='images/increase-decrease.png') }}" class="img-fluid">
+          </div>
+          <div class="col-md-9 col-6">
+            <h2>Tax Increase vs. Tax Decrease</h2>
+            <hr>
+            <p>Explore the changes units with tax cuts or tax increases by income over a span of 10 years.</p>
+            <a href="/gallery/increase-decrease">Look at it</a>
+          </div>
+        </div>
       </div>
     </div>
-  </a>
-</div>
+  </div>
 </div>
 
 {% endblock %}
