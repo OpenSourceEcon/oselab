@@ -1,8 +1,22 @@
-{% extends "gallery/gallery_layout.html" %}
+{% extends "layout.html" %}
 {% block body %}
 
-<div class="bk-root bubbleplot">
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.js"></script>
+
+{{
+  page_heading(
+    title="Marginal Effective Tax Rates on Corporate Investments",
+    body="Explore the effects of tax reforms on corporate investments in equipment and structure assets.",
+  )
+}}
+
+<div class="container py-5">
+  <div class="bk-root bubbleplot">
     <div class="bk-plotdiv" id="772bfafd-6874-4797-accf-cc793b84ea64"></div>
+  </div>
 </div>
 
 <script type="text/javascript">
