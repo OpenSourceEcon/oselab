@@ -1,0 +1,6 @@
+.page-heading {
+  background: #F7F7FA;
+  display: flex;
+  min-height: 250px;
+  align-items: center;
+}

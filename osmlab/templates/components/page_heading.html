@@ -1,0 +1,11 @@
+{% macro page_heading(title, body=None) -%}
+  <div class="page-heading py-5">
+    <div class="container">
+      <h1>{{ title }}</h1>
+
+      {% if body is not none %}
+        <p>{{ body }}</p>
+      {% endif %}
+    </div>
+  </div>
+{%- endmacro %}
