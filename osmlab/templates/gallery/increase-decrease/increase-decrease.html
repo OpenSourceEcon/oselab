@@ -1,8 +1,22 @@
-{% extends "gallery/gallery_layout.html" %}
+{% extends "layout.html" %}
 {% block body %}
 
-<div class="bk-root increase-decrease">
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.7.min.js"></script>
+
+{{
+  page_heading(
+    title="Tax Increase vs. Tax Decrease",
+    body="Explore the changes units with tax cuts or tax increases by income over a span of 10 years.",
+  )
+}}
+
+<div class="container py-5">
+  <div class="bk-root increase-decrease">
     <div class="bk-plotdiv" id="d8ba1f9b-33c9-465f-a077-773a4f089c56"></div>
+  </div>
 </div>
 
 <script type="text/javascript">
