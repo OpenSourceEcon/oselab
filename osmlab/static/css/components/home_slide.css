@@ -29,7 +29,7 @@
 }
 
 .home-slide--red,
-.home-slide--blue {
+.home-slide--gray {
   color: white;
 }
 
@@ -38,9 +38,9 @@
   opacity: 0.5;
 }
 
-.home-slide--blue:before {
-  background: blue;
-  opacity: 0.4;
+.home-slide--gray:before {
+  background: #222;
+  opacity: 0.5;
 }
 
 .home-slide__content {

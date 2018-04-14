@@ -19,28 +19,28 @@ def gallery():
     """
     Serve up the gallery page
     """
-    return render_template('gallery/gallery.html')
+    return render_template('gallery/index.html')
 
 
-@app.route('/gallery/bubble-plot')
-def bubbleplot():
+@app.route('/gallery/marginal_effective_corporate_taxes')
+def marginal_effective_corporate_taxes():
     """
-    Serve up the bubble plot
+    Serve up the Marginal Effective Tax Rates on Corporate Investments viz
     """
-    return render_template('gallery/bubbleplot/bubbleplot.html')
+    return render_template('gallery/marginal_effective_corporate_taxes.html')
 
 
-@app.route('/gallery/surf3Dtime')
-def surf3Dtime():
+@app.route('/gallery/overlapping_generations')
+def overlapping_generations():
     """
-    Serve up the surf3Dtime viz
+    Serve up the overlapping generations viz
     """
-    return render_template('gallery/surf3Dtime/surf3Dtime.html')
+    return render_template('gallery/overlapping_generations.html')
 
 
-@app.route('/gallery/increase-decrease')
+@app.route('/gallery/tax_increase_decrease')
 def increase_decrease():
     """
-    Serve up the increase-decrease viz
+    Serve up the tax_increase_decrease viz
     """
-    return render_template('gallery/increase-decrease/increase-decrease.html')
+    return render_template('gallery/tax_increase_decrease.html')
