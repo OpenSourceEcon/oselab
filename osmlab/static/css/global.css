@@ -4,10 +4,6 @@ body {
   font-family: Roboto, Helvetica, Arial, sans;
 }
 
-.container {
-  max-width: 1440px;
-}
-
 .osm-nav {
   z-index: 10;
 }

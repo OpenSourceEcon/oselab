@@ -1,0 +1,5 @@
+.nav-container,
+.footer-container {
+  margin: auto;
+  max-width: 1440px;
+}
