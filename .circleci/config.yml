@@ -1,0 +1,21 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.2
+    steps:
+      - checkout
+      - run:
+        - command: |
+          python3 -m venv test_env
+          . test_env/bin/activate
+          pip install -e .
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "setup.py" }}
+          paths:
+            - "test_env"
+      - run:
+          command: |
+            . test_env/bin/activate
+            bin/test
