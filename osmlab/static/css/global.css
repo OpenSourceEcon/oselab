@@ -5,6 +5,7 @@ body {
 }
 
 .osm-nav {
+  padding: 10px 80px;
   z-index: 10;
 }
 
