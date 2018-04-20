@@ -13,6 +13,12 @@ def homepage():
     """
     return render_template('home/index.html')
 
+@app.route('/about')
+def about():
+    """
+    Shows the about page
+    """
+    return render_template('home/about.html')
 
 @app.route('/gallery')
 def gallery():
