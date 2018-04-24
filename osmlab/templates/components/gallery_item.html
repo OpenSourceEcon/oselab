@@ -1,0 +1,17 @@
+{% from 'components/floating_arrow_link.html' import floating_arrow_link %}
+
+{% macro gallery_item(title, body, url, image) -%}
+  <div class="py-5">
+    <div class="row">
+      <div class="col-md-3 col-6">
+        <img src="{{ image }}" class="img-fluid" />
+      </div>
+      <div class="col-md-9 col-6">
+        <h2>{{ title }}</h2>
+        <hr>
+        <p>{{ body }}</p>
+        {{ floating_arrow_link('View visualization', url) }}
+      </div>
+    </div>
+  </div>
+{%- endmacro %}

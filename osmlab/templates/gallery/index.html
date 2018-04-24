@@ -10,47 +10,40 @@
 }}
 
 <div class="container py-4">
-  <div class="gallery-item py-5">
-    <div class="row">
-      <div class="col-md-3 col-6">
-        <img src="{{ url_for('static', filename='images/overlapping_generations.png') }}" class="img-fluid">
-      </div>
-      <div class="col-md-9 col-6">
-        <h2>Overlapping Generations Model</h2>
-        <hr>
-        <p>Explore various aggregate and individual macroeconomic variables over time with both 3D and 2D plots.</p>
-        <a href="/gallery/overlapping_generations">View visualization</a>
-      </div>
-    </div>
-  </div>
+  {{
+    gallery_item(
+      title="Overlapping Generations Model",
+      body="""
+        Explore various aggregate and individual macroeconomic variables over time
+        with both 3D and 2D plots.
+        """,
+      url="/gallery/overlapping_generations",
+      image=url_for('static', filename='images/overlapping_generations.png'),
+    )
+  }}
 
-  <div class="gallery-item py-5">
-    <div class="row">
-      <div class="col-md-3 col-6">
-        <img src="{{ url_for('static', filename='images/marginal_effective_corporate_taxes.png') }}" class="img-fluid">
-      </div>
-      <div class="col-md-9 col-6">
-        <h2>Marginal Effective Tax Rates on Corporate Investments</h2>
-        <hr>
-        <p>Explore the effects of tax reforms on corporate investments in equipment and structure assets.</p>
-        <a href="/gallery/marginal_effective_corporate_taxes">View visualization</a>
-      </div>
-    </div>
-  </div>
+  {{
+    gallery_item(
+      title="Marginal Effective Tax Rates on Corporate Investments",
+      body="""
+        Explore the effects of tax reforms on corporate investments in equipment
+        and structure assets.
+        """,
+      url="/gallery/marginal_effective_corporate_taxes",
+      image=url_for('static', filename="images/marginal_effective_corporate_taxes.png"),
+    )
+  }}
 
-  <div class="gallery-item py-5">
-    <div class="row">
-      <div class="col-md-3 col-6">
-        <img src="{{ url_for('static', filename='images/tax_increase_decrease.png') }}" class="img-fluid">
-      </div>
-      <div class="col-md-9 col-6">
-        <h2>Tax Increase vs. Tax Decrease</h2>
-        <hr>
-        <p>Explore the changes units with tax cuts or tax increases by income over a span of 10 years.</p>
-        <a href="/gallery/tax_increase_decrease">View visualization</a>
-      </div>
-    </div>
-  </div>
+  {{
+    gallery_item(
+      title="Tax Increase vs. Tax Decrease",
+      body="""
+        Explore the changes units with tax cuts or tax increases by income over a span of 10 years.
+        """,
+      url="/gallery/tax_increase_decrease",
+      image=url_for('static', filename="images/tax_increase_decrease.png"),
+    )
+  }}
 </div>
 
 {% endblock %}
