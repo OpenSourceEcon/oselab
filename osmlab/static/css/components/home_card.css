@@ -35,25 +35,3 @@
   line-height: 22px;
   margin: 14px 0 0;
 }
-
-.home-card__link {
-  color: #2B2B2B;
-  font-weight: 500;
-  transition: color 0.15s;
-}
-
-.home-card__link:hover {
-  color: #75140C;
-  text-decoration: none;
-}
-
-.home-card__arrow {
-  display: inline-block;
-  font-family: monospace;
-  font-size: 16px;
-  transition: transform 0.15s;
-}
-
-.home-card__link:hover .home-card__arrow {
-  transform: translate3d(3px, 0, 0);
-}

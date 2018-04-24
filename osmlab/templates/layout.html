@@ -1,3 +1,5 @@
+{% from 'components/floating_arrow_link.html' import floating_arrow_link %}
+
 {% from 'components/home_card.html' import home_card %}
 {% from 'components/home_slide.html' import home_slide %}
 {% from 'components/page_heading.html' import page_heading %}
@@ -16,6 +18,8 @@
 
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home/index.css') }}">
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home/about.css') }}">
+
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/components/floating_arrow_link.css') }}">
 
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/components/home_card.css') }}">
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/components/home_slide.css') }}">
