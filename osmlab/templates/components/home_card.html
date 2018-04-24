@@ -1,12 +1,12 @@
+{% from 'components/floating_arrow_link.html' import floating_arrow_link %}
+
 {% macro home_card(title, body, url) -%}
   <div class="home-card">
     <div class="home-card__content">
       <h4 class="home-card__heading">{{ title }}</h4>
       <p class="home-card__body-content">{{ body }}</p>
       <p class="home-card__body-content">
-        <a href="{{ url }}" class="home-card__link">
-          Continue reading&nbsp;<span class="home-card__arrow">&rarr;</span>
-        </a>
+        {{ floating_arrow_link('Continue reading', url) }}
       </p>
     </div>
   </div>
