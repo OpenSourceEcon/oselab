@@ -9,10 +9,6 @@ Open Source Macroeconomics Lab Webpage built in [Flask](http://flask.pocoo.org).
 
 The app will run locally at `localhost:5000`.
 
-### TODO
-- [x] Render HTML for Bokeh visualizations
-- [x] Set up routes to visualizations
-- [ ] Create footer for layout
-- [ ] Style homepage
-- [ ] Write README for future contributors
-- [ ] Figure out best way for development of new visualizations (repurpose Django app)
+## Running tests
+
+To run the test suite, run `python osmlab/tests/views_test.py` from the repo root.
