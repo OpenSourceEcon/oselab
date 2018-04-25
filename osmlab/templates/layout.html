@@ -14,18 +14,9 @@
 
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/global.css') }}">
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/layout.css') }}">
-
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home/index.css') }}">
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/home/about.css') }}">
-
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/components/floating_arrow_link.css') }}">
-
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/components/home_card.css') }}">
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/components/home_slide.css') }}">
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/components/page_heading.css') }}">
-  <script type="text/javascript" src="{{ url_for('static', filename='javascript/home/slideshow.js') }}"></script>
+  {% assets 'stylesheets' %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}">
+  {% endassets %}
 </head>
 
 <html>
@@ -89,5 +80,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    {% assets 'javascripts' %}
+      <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
   </body>
 </html>
