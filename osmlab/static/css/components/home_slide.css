@@ -54,3 +54,28 @@
   letter-spacing: 0.25px;
   margin-bottom: 20px;
 }
+
+.home-slide__pip-container {
+  align-items: center;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+
+.home-slide__pip {
+  background: #fff;
+  cursor: pointer;
+  height: 2px;
+  margin: 0 4px;
+  opacity: 0.5;
+  transition: 0.2s opacity;
+  width: 35px;
+}
+
+.home-slide__pip--active {
+  opacity: 1;
+}

@@ -25,9 +25,10 @@
 
 .home-header__slideshow {
   background: #ddd;
+  display: flex;
   flex: 0 0 55%;
   overflow: hidden;
-  display: flex;
+  position: relative;
 }
 
 .latest-section {
