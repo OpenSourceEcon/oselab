@@ -4,6 +4,11 @@ var interval = -1;
 
 function initializeSlideshow() {
   slideshowRoot = $('.home-header__slideshow');
+
+  if (!slideshowRoot || slideshowRoot.length === 0) {
+    return;
+  }
+
   slides = $('.home-slide');
 
   pipContainer = $('.home-slide__pip-container');
