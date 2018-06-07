@@ -1,3 +1,7 @@
+.osm-main {
+  min-height: 75vh;
+}
+
 .footer-container {
   margin: auto;
   max-width: 1440px;
