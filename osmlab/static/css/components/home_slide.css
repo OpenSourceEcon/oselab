@@ -67,15 +67,49 @@
 }
 
 .home-slide__pip {
-  background: #fff;
   cursor: pointer;
-  height: 2px;
   margin: 0 4px;
   opacity: 0.5;
+  padding: 10px 0;
   transition: 0.2s opacity;
   width: 35px;
 }
 
+.home-slide__pip:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+}
+
 .home-slide__pip--active {
   opacity: 1;
+}
+
+.home-slide__arrow {
+  align-items: center;
+  bottom: 0;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  z-index: 3;
+  user-select: none;
+}
+
+.home-slide__arrow--left {
+  left: 0;
+}
+
+.home-slide__arrow--right {
+  right: 0;
+}
+
+.home-slide__arrow__icon {
+  width: 15px;
 }
