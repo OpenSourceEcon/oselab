@@ -50,3 +50,10 @@ def increase_decrease():
     Serve up the tax_increase_decrease viz
     """
     return render_template('gallery/tax_increase_decrease.html')
+
+@app.route('/blog/<post>')
+def blog_post(post):
+    """
+    Serve up the given blog post
+    """
+    return render_template(f"blog/posts/{post}.html")
