@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.6
   - flask=1.0.2
+  - Pygments=2.2.0
   - pip:
     - Flask-Assets
     - Flask-Markdown
