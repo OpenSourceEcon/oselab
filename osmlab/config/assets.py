@@ -11,6 +11,7 @@ assets.register('javascripts', javascripts)
 stylesheets = Bundle(
   'css/global.css',
   'css/layout.css',
+  'css/pygment.css',
   'css/components/*.css',
   'css/home/*.css',
   'css/gallery/*.css',

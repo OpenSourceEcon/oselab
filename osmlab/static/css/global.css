@@ -9,6 +9,12 @@ body {
   transition: color 0.3s;
 }
 
+.highlight {
+  background: #F4F4F4;
+  border-radius: 4px;
+  padding: 20px 20px 10px;
+}
+
 .text-chicago:focus,
 .text-chicago:hover,
 .text-chicago:active {
