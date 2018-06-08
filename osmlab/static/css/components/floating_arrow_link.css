@@ -1,12 +1,5 @@
 .floating-arrow-link {
-  color: #2B2B2B;
   font-weight: 500;
-  transition: color 0.15s;
-}
-
-.floating-arrow-link:hover {
-  color: #75140C;
-  text-decoration: none;
 }
 
 .floating-arrow-link__arrow {
