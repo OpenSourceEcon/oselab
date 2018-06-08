@@ -4,6 +4,18 @@ body {
   font-family: Roboto, Helvetica, Arial, sans;
 }
 
+.text-chicago {
+  color: #75140C;
+  transition: color 0.3s;
+}
+
+.text-chicago:focus,
+.text-chicago:hover,
+.text-chicago:active {
+  color: #b9554d;
+  text-decoration: none;
+}
+
 .osm-nav {
   padding: 10px 80px;
   z-index: 10;
