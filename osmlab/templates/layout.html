@@ -11,13 +11,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="The Open Source Macroeconomics Laboratory (OSM Lab) at the University of Chicago provides training and supports macroeconomic research and open source methods." />
 
-  <title>Open Source Macroeconomic Laboratory</title>
+  <title>{{ title }}</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 
+
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:image" content="{{ url_for('static', filename='chicago_wordmark.svg') }}">
+  <meta property="og:description" content="The Open Source Macroeconomics Laboratory (OSM Lab) at the University of Chicago provides training and supports macroeconomic research and open source methods.">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@OpenSourceMacro">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="The Open Source Macroeconomics Laboratory (OSM Lab) at the University of Chicago provides training and supports macroeconomic research and open source methods.">
+  <meta name="twitter:image" content="{{ url_for('static', filename='chicago_wordmark.svg') }}">
 
   {% assets 'stylesheets' %}
     <link rel="stylesheet" href="{{ ASSET_URL }}">

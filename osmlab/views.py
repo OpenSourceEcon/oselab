@@ -1,10 +1,11 @@
 from flask import render_template
 from osmlab import app
+from osmlab.utils import build_page_title
 from datetime import datetime
 
 @app.context_processor
 def inject_view_helpers():
-    return {'now': datetime.utcnow()}
+    return dict(now=datetime.utcnow(), title=build_page_title())
 
 @app.route('/')
 def homepage():
@@ -18,14 +19,14 @@ def about():
     """
     Shows the about page
     """
-    return render_template('home/about.html')
+    return render_template('home/about.html', title=build_page_title('About'))
 
 @app.route('/gallery')
 def gallery():
     """
     Serve up the gallery page
     """
-    return render_template('gallery/index.html')
+    return render_template('gallery/index.html', title=build_page_title('Gallery'))
 
 
 @app.route('/gallery/marginal_effective_corporate_taxes')
@@ -33,7 +34,7 @@ def marginal_effective_corporate_taxes():
     """
     Serve up the Marginal Effective Tax Rates on Corporate Investments viz
     """
-    return render_template('gallery/marginal_effective_corporate_taxes.html')
+    return render_template('gallery/marginal_effective_corporate_taxes.html', title=build_page_title('Marginal Effective Tax Rates on Corporate Investments'))
 
 
 @app.route('/gallery/overlapping_generations')
@@ -41,7 +42,7 @@ def overlapping_generations():
     """
     Serve up the overlapping generations viz
     """
-    return render_template('gallery/overlapping_generations.html')
+    return render_template('gallery/overlapping_generations.html', title=build_page_title('Overlapping Generations'))
 
 
 @app.route('/gallery/tax_increase_decrease')
@@ -56,4 +57,4 @@ def blog_post(post):
     """
     Serve up the given blog post
     """
-    return render_template(f"blog/posts/{post}.html")
+    return render_template(f"blog/posts/{post}.html", title=build_page_title('Blog'))
