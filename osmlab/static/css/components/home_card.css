@@ -5,12 +5,8 @@
 
 @media all and (max-width: 800px) {
   .home-card {
-    flex: 0 0 100%;
-    margin-bottom: 25px;
-  }
-
-  .home-card:last-of-type {
-    margin-bottom: 0;
+    flex: 0 0 95%;
+    margin-bottom: 15px;
   }
 }
 

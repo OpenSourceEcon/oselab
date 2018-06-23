@@ -45,6 +45,7 @@
 
 .home-slide__content {
   max-width: 450px;
+  padding: 40px 0;
   z-index: 1;
 }
 
@@ -112,4 +113,14 @@
 
 .home-slide__arrow__icon {
   width: 15px;
+}
+
+@media all and (max-width: 768px) {
+  .home-slide {
+    padding: 0 45px;
+  }
+
+  .home-slide__arrow {
+    width: 35px;
+  }
 }
