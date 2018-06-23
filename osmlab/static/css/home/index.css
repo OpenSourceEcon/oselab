@@ -50,6 +50,41 @@
 
 @media all and (max-width: 800px) {
   .latest-section__cards-container {
+    overflow: scroll;
+  }
+
+  .home-card {
+    margin-right: 10px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .home-header {
     flex-wrap: wrap;
+    height: auto;
+    margin-top: 0px;
+  }
+
+  .home-header__brand {
+    flex: 0 0 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .home-header__brand__description {
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    max-width: none;
+  }
+
+  .home-header__slideshow {
+    flex: 0 0 100%;
+    height: 90vh;
+  }
+
+  .latest-section {
+    padding: 60px 0;
   }
 }
