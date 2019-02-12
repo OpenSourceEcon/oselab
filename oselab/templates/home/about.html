@@ -1,23 +1,128 @@
-{% extends "layout.html" %}
-
-{% block body %}
+{% extends "layout.html" %} {% block body %}
 {{
   page_heading(
-    title="About OSM Lab"
+    title="About OSE Lab"
   )
 }}
 
 <div class="container py-4">
   <div class="about__text-container">
-    <h3 class="py-4">
-      The Open Source Macroeconomics Laboratory (OSM Lab) at the University of Chicago provides
-      training and supports macroeconomic research and open source methods.
-    </h3>
+    <p class="py-4">
+      The Open Source Economics Laboratory (OSE Lab) was founded by
+      <a target="_blank" href="https://sites.google.com/site/rickecon">Richard Evans</a>
+      in January 2017 at the University of Chicago thanks to a generous
+      five-year grant from the Charles Koch Foundation. The OSE Lab has a
+      five-point mission that involves supporting open source, open access
+      teaching, research, and policy tools.
+    </p>
 
+    <ol>
+      <li>Create open access training material for computational economics</li>
+      <li>
+        Support open source research that is collaborative, transparent, and
+        replicable
+      </li>
+      <li>Support policy-relevant open source applications</li>
+      <li>Support open source dynamic visualization tools</li>
+      <li>Support web apps for economic models</li>
+    </ol>
+
+    <h4 class="pt-4">
+      A. Create open access training material for computational economics.
+    </h4>
     <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, ducimus? Saepe cupiditate
-      porro voluptatibus nisi ex tenetur, reiciendis corporis culpa nostrum repudiandae minima optio
-      enim nulla ducimus nesciunt officiis molestias.
+      The biggest service provided by the OSE Lab is our Summer Boot Camp. The
+      2018 camp had 25 students enrolled and 15 different instructors. All of
+      the training materials for the Boot Camp are open access and are available
+      through OSE Lab's open source GitHub repositories
+      (<a target="_blank" href="https://github.com/OpenSourceEcon/BootCamp2017">2017 repo</a> and <a target="_blank" href="https://github.com/OpenSourceEcon/BootCamp2018">2018 repo</a>).
+      We expect to add lectures and training modules over the coming months and years.
+    </p>
+
+    <h4 class="pt-4">
+      B. Support open source research that is collaborative, transparent, and
+      replicable.
+    </h4>
+    <p>
+      Open source research is valuable for the replicability, sensitivity and
+      robustness testing, and transparency of research. This mission goes beyond
+      making public the code and data for papers. It involves using open source
+      platforms of Git and GitHub in research to make collaboration more
+      efficient. OSE Lab is currently supporting a number of open source
+      projects and paying for student research positions.
+    </p>
+
+    <h4 class="pt-4">C. Support policy-relevant open source applications.</h4>
+    <p>
+      In addition to research, economic models that are used for policy analysis
+      have a philosophical obligation to be open source. Closed source and
+      proprietary models cannot be verified or tested for sensitivity or
+      robustness. OSM Lab is currently supporting three models
+      (<a target="_blank" href="https://github.com/PSLmodels/OG-USA">OG-USA</a>,
+      <a target="_blank" href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a>,
+      and <a target="_blank" href="https://github.com/PSLmodels/B-Tax">B-Tax</a>) that are being used for policy analysis (key examples of use are the
+      2016 Presidential candidates, 2017 tax reform debate, and 2018 EITC and
+      marginal tax rate debates).
+    </p>
+
+    <h4 class="pt-4">D. Support open source dynamic visualization tools.</h4>
+    <p>
+      Dynamic visualizations (Bokeh, D3, JavaScript) are a key tool for both
+      advanced researchers as well as lay people to explore, digest, and
+      understand the complicated results of heterogeneous agent models and other
+      complicated models and data structures. OSM Lab is supporting active
+      development of stand-alone visualizations collected in an
+      <a target="_blank" href="http://osmlab.uchicago.edu">online gallery</a>,
+      implemented as results in online web app tools
+      <a href="http://apps.ospc.org/ccc" target="_blank">Cost of Capital Calculator</a>,
+      and a GitHub repository called
+      <a target="_blank" href="https://github.com/PSLmodels/plot-concepts/issues">plot-concepts</a>
+      where individuals can submit issues with dynamic visualization proposals
+      and developers can help build those visualizations.
+    </p>
+
+    <h4 class="pt-4">E. Support web apps for economic models.</h4>
+    <p>
+      OSE Lab is partnering with developers to build front-end web applications
+      that allow users to manipulate a key subset of model parameters, run its
+      economic models on Amazon Web Services, and return results to the user via
+      the web interface. Web applications allow researchers to do quick
+      computations with economic models without accessing the source code. Web
+      apps also allow non-economists (e.g., policymakers, journalists,
+      businesses, lobbyists) to run an economic model without having to
+      comprehend all the technical details. Our current web app portals include
+      <a href="http://apps.ospc.org/taxbrain" target="_blank">TaxBrain</a>
+      (microsimulation model for household taxation as well as three linked
+      dynamic models including OG-USA overlapping generations model) and
+      <a href="http://apps.ospc.org/ccc" target="_blank">Cost of Capital Calculator</a>
+      which calculates the effects of corporate tax policy on marginal tax rates
+      (incentives) for different industries and asset classes using the B-Tax
+      open-source model.
+    </p>
+
+    <h3 class="pt-4">History</h3>
+    <p>
+      The OSE Lab was administered from the Becker Friedman Institute at the
+      University of Chicago for its first two years from January 2017 to January
+      2019. During that time, it was called the Open Source Macroeconomics
+      Laboratory (OSM Lab). In January 2019, the name was changed to Open Source
+      Economics Laboratory to reflect the OSE Lab's broader mission in
+      computational economics across fields, and its administration was moved to
+      the Social Sciences Division at the University of Chicago.
+    </p>
+
+    <p class="pb-4">
+      Before coming to University of Chicago, Richard Evans and Kerk Phillips
+      founded the BYU Macroeconomics and Computational Laboratory (BYU-MCL) at
+      Brigham Young University in 2012. It was in the BYU-MCL in which the
+      format for the rigorous economics, computational, and mathematics training
+      was developed. The BYU-MCL lasted from 2012 to 2016. The format for the
+      BYU-MCL boot camp was adapted from an interdisciplinary applied
+      mathematics program at Brigham Young University (IMPACT), which ended in
+      2012 and became the Applied and Computational Mathematics Emphasis (ACME)
+      in the mathematics major at Brigham Young University. The BYU-MCL's
+      adaptation of the applied math and computational curriculum to the focused
+      applications in economics was a particularly good fit.
     </p>
   </div>
 </div>
