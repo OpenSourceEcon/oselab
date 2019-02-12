@@ -1,4 +1,4 @@
-from osmlab import app
+from oselab import app
 from flask_assets import Environment, Bundle
 
 assets = Environment(app)

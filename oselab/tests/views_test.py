@@ -1,7 +1,7 @@
-from osmlab import app
+from oselab import app
 import unittest
 
-class OSMLabTestCase(unittest.TestCase):
+class OSELabTestCase(unittest.TestCase):
   def setUp(self):
     self.app = app.test_client()
 

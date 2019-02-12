@@ -1,4 +1,4 @@
-from osmlab import app
+from oselab import app
 from flaskext.markdown import Markdown
 
 Markdown(app,

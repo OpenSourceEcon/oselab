@@ -22,55 +22,55 @@ body {
   text-decoration: none;
 }
 
-.osm-nav {
+.ose-nav {
   padding: 10px 80px;
   z-index: 10;
 }
 
-.osm-nav-item {
+.ose-nav-item {
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-.osm-footer {
+.ose-footer {
   background: #75140C;
   color: #fff;
   padding: 100px 120px 80px;
 }
 
-.osm-footer__icons-container {
+.ose-footer__icons-container {
   margin: 25px 0 20px 0;
 }
 
-.osm-footer__icon {
+.ose-footer__icon {
   margin-right: 10px;
   width: 28px;
 }
 
-.osm-footer__subtext {
+.ose-footer__subtext {
   letter-spacing: 0.2px;
   opacity: 0.6;
 }
 
 @media screen and (max-width: 768px) {
-  .osm-nav {
+  .ose-nav {
     font-size: 16px;
     padding: 15px 10px;
   }
 
-  .osm-nav-item:first-of-type {
+  .ose-nav-item:first-of-type {
     padding-top: 15px;
   }
 
-  .osm-footer {
+  .ose-footer {
     background: #75140C;
     color: #fff;
     padding: 80px 40px;
   }
 
-  .osm-footer__logo {
+  .ose-footer__logo {
     width: 225px;
   }
 }
