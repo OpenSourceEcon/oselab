@@ -1,4 +1,4 @@
-name: osmlab
+name: oselab
 channels:
   - defaults
 dependencies:

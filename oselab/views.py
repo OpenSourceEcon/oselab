@@ -1,6 +1,6 @@
 from flask import render_template
-from osmlab import app
-from osmlab.utils import build_page_title
+from oselab import app
+from oselab.utils import build_page_title
 from datetime import datetime
 
 @app.context_processor

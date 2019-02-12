@@ -6,4 +6,4 @@ jobs:
     steps:
       - checkout
       - run: pip install -e . --user
-      - run: python3 osmlab/tests/views_test.py
+      - run: python3 oselab/tests/views_test.py

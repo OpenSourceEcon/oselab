@@ -11,7 +11,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="The Open Source Macroeconomics Laboratory (OSM Lab) at the University of Chicago provides training and supports macroeconomic research and open source methods." />
+  <meta name="description" content="The Open Source Economics Laboratory (OSE Lab) at the University of Chicago provides training and supports macroeconomic research and open source methods." />
 
   <title>{{ title }}</title>
 
@@ -19,12 +19,12 @@
 
   <meta property="og:title" content="{{ title }}">
   <meta property="og:image" content="{{ url_for('static', filename='chicago_wordmark.svg') }}">
-  <meta property="og:description" content="The Open Source Macroeconomics Laboratory (OSM Lab) at the University of Chicago provides training and supports macroeconomic research and open source methods.">
+  <meta property="og:description" content="The Open Source Economics Laboratory (OSE Lab) at the University of Chicago provides training and supports macroeconomic research and open source methods.">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@OpenSourceMacro">
+  <meta name="twitter:site" content="@OSE_Lab">
   <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="The Open Source Macroeconomics Laboratory (OSM Lab) at the University of Chicago provides training and supports macroeconomic research and open source methods.">
+  <meta name="twitter:description" content="The Open Source Economics Laboratory (OSE Lab) at the University of Chicago provides training and supports macroeconomic research and open source methods.">
   <meta name="twitter:image" content="{{ url_for('static', filename='chicago_wordmark.svg') }}">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/bootstrap.min.css') }}">
@@ -37,9 +37,9 @@
 <html>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light osm-nav container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light ose-nav container-fluid">
       <a class="navbar-brand" href="/">
-        <img src="{{ url_for('static', filename='images/osm_lab_wordmark.png') }}"/>
+        <img src="{{ url_for('static', filename='images/ose_lab_wordmark.png') }}"/>
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,48 +48,48 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item osm-nav-item">
+          <li class="nav-item ose-nav-item">
             <a class="nav-link" href="{{ url_for('about') }}">About</a>
           </li>
 
-          <li class="nav-item osm-nav-item">
+          <li class="nav-item ose-nav-item">
             <a class="nav-link" href="{{ url_for('gallery') }}">Gallery</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <main class="osm-main">
+    <main class="ose-main">
       {% block body %}{% endblock %}
     </main>
 
-    <footer class="osm-footer">
+    <footer class="ose-footer">
       <div class="footer-container">
         <img
           alt="University of Chicago"
-          class="img-fluid osm-footer__logo"
+          class="img-fluid ose-footer__logo"
           src="{{ url_for('static', filename='images/chicago_wordmark.svg') }}"
         />
 
-        <div class="osm-footer__icons-container">
-          <a href="https://twitter.com/OpenSourceMacro" target="_blank">
+        <div class="ose-footer__icons-container">
+          <a href="https://twitter.com/OSE_Lab" target="_blank">
             <img
-              alt="OSM Lab on Twitter"
-              class="osm-footer__icon"
+              alt="OSE Lab on Twitter"
+              class="ose-footer__icon"
               src="{{ url_for('static', filename='images/twitter_icon.svg') }}"
             />
           </a>
 
-          <a href="https://github.com/OpenSourceMacro" target="_blank">
+          <a href="https://github.com/OpenSourceEcon" target="_blank">
             <img
-              alt="OSM Lab on GitHub"
-              class="osm-footer__icon"
+              alt="OSE Lab on GitHub"
+              class="ose-footer__icon"
               src="{{ url_for('static', filename='images/github_icon.svg') }}"
             />
           </a>
         </div>
 
-        <p class="osm-footer__subtext"><small>&copy; {{ now.year }} The University of Chicago</small></p>
+        <p class="ose-footer__subtext"><small>&copy; {{ now.year }} The University of Chicago</small></p>
       </div>
     </footer>
 

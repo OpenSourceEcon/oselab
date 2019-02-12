@@ -53,7 +53,7 @@ Here is a sample of what your visualization template might look like:
 
 ### Add your visualization to the Gallery index
 
-Finally, you will want to add a link to your visualization from the gallery index. This is made easy with the [`gallery_item`](https://github.com/OpenSourceMacro/osmlab/blob/master/osmlab/templates/components/gallery_item.html) macro:
+Finally, you will want to add a link to your visualization from the gallery index. This is made easy with the [`gallery_item`](https://github.com/OpenSourceEcon/oselab/blob/master/oselab/templates/components/gallery_item.html) macro:
 
 ```jiinja
 {{
