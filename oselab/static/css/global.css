@@ -4,6 +4,10 @@ body {
   font-family: Roboto, Helvetica, Arial, sans;
 }
 
+ol {
+  list-style-type: upper-alpha;
+}
+
 .text-chicago {
   color: #75140C;
   transition: color 0.3s;
