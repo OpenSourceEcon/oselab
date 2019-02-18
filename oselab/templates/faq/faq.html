@@ -1,0 +1,89 @@
+{% from 'faq/components/faq_question.html' import faq_question %}
+
+{% extends "layout.html" %}
+{% block body %}
+
+{{
+  page_heading(title="Frequently asked questions")
+}}
+
+<div class="container py-4">
+  {{
+    faq_question(
+      question="""
+        What is the time commitment for students participating in the OSE Lab boot camp?
+      """,
+      answer="""
+        All students who are admitted to the program will be expected to fully participate\
+        in and attend all lectures and submit all problem sets. The six-week program is\
+        designed to require between 50 and 60 hours of work per week. This program is immersive.
+      """,
+    )
+  }}
+
+  {{
+    faq_question(
+      question="""
+        What are the main benefits to students who complete the OSE Lab boot camp?
+      """,
+      answer="""
+        Students who complete the boot camp emerge with an enhanced modern toolkit of\
+        computational economics theory, solution methods, and data science methods.\
+        They also receive two weeks of training in high performance computing and parallel\
+        processing using the University of Chicago's Midway supercomputing cluster. Finally,\
+        students learn how to collaborate effectively and work in teams.
+      """,
+    )
+  }}
+
+  {{
+    faq_question(
+      question="""
+        Can I be working another job or take classes during the OSE Lab Boot Camp?
+      """,
+      answer="""
+        No. This boot camp is a full-time commitment and will require all of your bandwidth.
+      """,
+    )
+  }}
+
+  {{
+    faq_question(
+      question="""
+        If I am an international student, can the OSE Lab give me the stipend and reimburse my travel?
+      """,
+      answer="""
+        Yes. International students are eligible to receive the scholarship stipend and travel\
+        reimbursement.
+      """,
+    )
+  }}
+
+  {{
+    faq_question(
+      question="""
+        Will the camp sponsor a student visa?
+      """,
+      answer="""
+        No. The OSE Lab and the University of Chicago cannot provide visa sponsorship for\
+        international students. Students will travel under a B1/Visa Waiver.
+      """,
+    )
+  }}
+
+  {{
+    faq_question(
+      question="""
+        Can I have my recommender send my letter of recommendation directly to OSE Lab?
+      """,
+      answer='''
+        Yes. If your recommender will not give you the letter to upload to the application\
+        portal, you can have your recommender e-mail the letter to Richard Evans
+        ([rwevans@uchicago.edu](mailto:rwevans@uchicago.edu)). Make sure your recommender puts\
+        your name and "OSE camp letter of recommendation."
+      ''',
+    )
+  }}
+</div>
+
+{% endblock %}

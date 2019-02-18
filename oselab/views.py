@@ -21,6 +21,13 @@ def about():
     """
     return render_template('home/about.html', title=build_page_title('About'))
 
+@app.route('/faq')
+def faq():
+    """
+    Show the FAQ page
+    """
+    return render_template('faq/faq.html', title=build_page_title('FAQ'))
+
 @app.route('/gallery')
 def gallery():
     """
