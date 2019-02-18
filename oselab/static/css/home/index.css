@@ -13,6 +13,10 @@
   padding: 0 40px 0 80px;
 }
 
+.home-header__image {
+  width: 250px;
+}
+
 .home-header__brand__description {
   color: #75140C;
   font-size: 20px;
