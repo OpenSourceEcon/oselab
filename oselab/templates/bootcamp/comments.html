@@ -1,0 +1,188 @@
+{% from 'bootcamp/components/comment.html' import comment %} {% extends
+"layout.html" %} {% block body %}
+
+{{
+  page_heading(
+    title="Boot camp alumni comments",
+    body="Below are comments from past participants in the OSE Lab Boot Camp at the University of Chicago."
+  )
+}}
+
+<div class="container py-3">
+  {{
+    comment(
+      comment="""
+        It was such a great experience to participate in the OSM Macro Bootcamp.
+        After participating in the program, I got a research assistant position
+        simply by just showing the professor my Github and all of the cool
+        Math/Econ/Computation we did in the OSM lab.
+      """,
+      author="Alex Weinberg, University of Chicago"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        The OSM Lab fosters a great environment for growing as researchers in many
+        dimensions. My technical skills have definitely improved. I'm leaving the
+        program with very applicable knowledge in math and computational methods
+        that I'll surely use in future research. The constant collaboration with
+        other students was extremely valuable, too. I learned so much from my
+        peers and am excited to have built this network of motivated students and
+        friends. Lastly, I've connected with many of the OSM Lab faculty, a few of
+        whom I definitely consider as mentors after working with them at the OSM
+        Lab, and am excited to stay in contact and potentially work with them in
+        the future.
+      """,
+      author="Rebekah Dix, University of Wisconsin, Madison"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        For me the high performance computing content was the best part of the
+        bootcamp, as I knew zero python before coming in (only worked in STATA before),
+        and now I feel comfortable saying \"I can do scientific computing in Python\"
+        in an interview. That alone would make the bootcamp worth it, and I thought
+        the ACME exercises,while intense, were absolutely fantastic guides to Python.
+      """,
+      author="Matthew Brown, University of Notre Dame"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        The OSM bootcamp did a great job at bridging the gap between math, economic,
+        and computational theory to their respective applications. It was great to be
+        able to learn the theory and see how it is relevant to research. I also
+        entered the bootcamp feeling relatively less experienced in my coding
+        capability, but now I feel I am proficient enough to be able to do good
+        quality research. The skills developed at the bootcamp are a great tool that I
+        think separates the students of the bootcamp from the majority of other
+        students around the world. Taking the time to learn these things now as
+        opposed to having to learn them on our own in a graduate level program will
+        give a huge advantage to us in such programs, and will help us each to become
+        outstanding researchers.
+      """,
+      author="Daniel Fox, Brigham Young University"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        I liked the atmosphere that pushed all of us to the limit, and making us
+        collaborate with each other. The program shows us that we didn't have to be
+        perfect in every subject; learning the lesson that we didn't have to be
+        perfect in every subject and how to cooperate with each other to finish the
+        tasks were the essence of academic researches, and they were certainly the
+        most important lessons to me who was competition-stricken before this program.
+        During the program, I met with various kinds of friends in other cultures, and
+        had a lot of opportunities to exchange not only our research opinions but also
+        practical lessons from them about economics in general. These were the
+        experiences that will make me leap further to the next stage of my research,
+        and I definitely want to keep in touch with them as my valuable future in my
+        career path from now on.
+      """,
+      author="Jaehyung Kim, University of Minnesota"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        I really enjoyed the way computation, math and economics were brought together
+        for a large part of the boot camp. It made what we learned a lot more useful,
+        applicable and exciting. It was very cool to see esoteric mathematical
+        concepts like SVD and complex matrix operations being applied to the real
+        world of economics or data processing through programming. I don't think I've
+        been through a program in school where what I was learning tied in so well to
+        the real world.
+      """,
+      author="Bryan Chia, Brigham Young University"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        I like the fact that it brings a group of highly motivated students together
+        to work collaboratively on learning programming, mathematics and economics.
+        The atmosphere in the camp was really conducive towards ensuring everyone had
+        a good understanding of all of the material.
+      """,
+      author="Wei Han Chia, University of Chicago"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        Seeing the interaction among instructors, students, and instructors and
+        students, it made me realize how closely connected the (computational)
+        economics community is. It gave me a lot of perspective on paths that previous
+        students and researchers have taken, and introduced me to a marvelous group of
+        people beyond UChicago, some of which I will definitely stay in touch with.
+      """,
+      author="Jan Ertl, University of Chicago"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        My coding skills improved greatly throughout the program and really showed me
+        how the coding could be applied to economic models. The group of students in
+        the program was amazing and I learned a lot from the people around me not only
+        about the topics taught in the course, but also about the other research
+        projects that they are pursuing. I think that I have come out of the program
+        with a very unique skill set that opens up the types of questions that I can
+        ask in my own research and the types of techniques that I have available to
+        answer those questions.
+      """,
+      author="Geoffrey Kochs, Brown University"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        The collaborative nature of the lab allowed me to forge great relationships
+        with people, working on meaningful assignments without the stress of
+        examinations. It's a great format to keep going forward.
+      """,
+      author="Benjamin Lim, Northwestern University"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        While the content and inspiration to do research were phenomenal, what I
+        enjoyed most was getting to know everyone in our cohort. During the boot camp
+        I made some of the closest friendships I've ever had, and we were only here
+        for seven weeks time. From the (many) long hours working together on problem
+        sets and initiating independent research projects to exploring the wonderful
+        city of Chicago, this has one of the best summer experiences ever (and
+        certainly the most formative). I have greatly enjoyed the content we have
+        learned, and feel that my eyes have been opened.
+      """,
+      author="Eric Miller, University of South Carolina"
+    )
+  }}
+
+  {{
+    comment(
+      comment="""
+        The breadth of the materials and topics; witnessing the marriage of
+        theoretical math, computation, and economics. It's particularly rewarding to
+        combine skills honed in different classes to answer interesting questions.
+      """,
+      author="Elysa Strunin, University of Chicago"
+    )
+  }}
+</div>
+{% endblock %}
