@@ -28,6 +28,13 @@ def faq():
     """
     return render_template('faq/faq.html', title=build_page_title('FAQ'))
 
+@app.route('/bootcamp/2019')
+def bootcamp_2019():
+    """
+    Show the 2019 bootcamp page
+    """
+    return render_template('/bootcamp/2019.html', title=build_page_title('2019 Boot Camp'))
+
 @app.route('/bootcamp/comments')
 def bootcamp_comments():
     """
