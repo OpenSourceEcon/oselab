@@ -1,0 +1,17 @@
+{% macro faq_question(question, answer) -%}
+  {% set handle = question | handleize %}
+
+  <div class="faq-question" id="{{ handle }}">
+    <a href="#{{ handle }}">
+      <small class="faq-question__heading">Question</small>
+    </a>
+    <h3 class="faq-question__question">{{ question }}</h3>
+
+    <div class="faq-question__answer">
+      <small class="faq-question__heading">Answer</small>
+      {% filter markdown %}
+      {{ answer | dedent }}
+      {% endfilter %}
+    </div>
+  </div>
+{%- endmacro %}

@@ -24,6 +24,7 @@ stylesheets = Bundle(
   'css/components/*.css',
   'css/home/*.css',
   'css/gallery/*.css',
+  'css/faq/*.css',
   output='build/main-%(version)s.css'
 )
 assets.register('stylesheets', stylesheets)
