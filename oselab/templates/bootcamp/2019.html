@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+{% block body %}
+{{
+  page_heading(
+    title="2019 Open Source Economics Laboratory (OSE Lab) Boot Camp",
+    body="July 1–August 9, 2019 | Saieh Hall for Economics, University of Chicago"
+  )
+}}
+
+<div class="py-4 container">
+  <p>
+    The OSE Lab Boot Camp helps build advanced computational skills for economic
+    research and policy analysis.
+  </p>
+
+  <p>
+    The Social Sciences Division at the University of Chicago is pleased to
+    announce the third year of the Open Source Economics Laboratory (OSE Lab),
+    which will run an intensive and immersive six-week computational economics
+    Boot Camp from July 1 to August 9, 2019.
+  </p>
+
+  <p>
+    <strong>
+      The goals of the Boot Camp are to:
+    </strong>
+  </p>
+
+  <ul>
+    <li>
+      train advanced undergraduates and graduate students with the computational
+      skills to participate in cutting-edge economic research and public policy
+      analysis
+    </li>
+    <li>
+      inspire the brightest young researchers to pursue policy-relevant research
+      throughout their careers
+    </li>
+    <li>
+      spread ideals of transparency and replicability throughout the economics
+      profession from the ground up
+    </li>
+    <li>
+      accelerate scientific progress in economics and policy analysis more
+      broadly through modern collaborative workflows
+    </li>
+  </ul>
+
+  <p>
+    Applications to the OSE Lab Boot Camp are encouraged from talented and
+    motivated advanced undergraduate students and graduate students, with 25
+    fully funded student slots available for summer 2019. Funding includes
+    travel to and from the University of Chicago, housing at the University, and
+    a stipend of $4,000 for the six weeks. Successful applicants will have taken
+    courses or demonstrate proficiency in core microeconomic theory (constrained
+    optimization with Lagrangian multipliers), linear algebra, multivariable
+    calculus, real analysis, and writing code in some programming language.
+  </p>
+
+  <h3 class="mt-5">Program details</h3>
+
+  <p>
+    The curriculum of this program includes advanced mathematics, economic
+    theory, machine learning, and computational methods, all with a focus on
+    open source languages, collaboration, and exposition. Programming at the
+    Boot Camp will be mostly in Python. We will also use the collaborative open
+    source platforms of git and GitHub extensively. The previous two summers'
+    curriculum materials are available in the
+    <a href="https://github.com/OpenSourceEcon/BootCamp2018">BootCamp2018</a>
+    and
+    <a href="https://github.com/OpenSourceEcon/BootCamp2017">BootCamp2017</a>
+    GitHub repositories.
+  </p>
+
+  <p>
+    The OSE Lab Boot Camp curriculum will draw from open source curriculum
+    developed by the OSE Lab instructors as well as the resources of
+    <a href="https://quantecon.org">QuantEcon.org</a> produced by Thomas Sargent
+    and John Stachurski. We will also use an extensive set of applied
+    mathematics open source training modules and computational labs from the
+    Brigham Young University Applied and Computational Math Emphasis (ACME).
+    Student researchers who complete the OSE Lab Boot Camp will emerge with a
+    rich set of computational tools, experience in successfully applying those
+    tools to macroeconomic questions, and the ability to collaborate
+    effectively.
+  </p>
+
+  <p>
+    One of the most valuable modules in the OSE Lab Boot Camp will be two weeks
+    of training in high performance computing and parallel programming using the
+    University of Chicago's Midway supercomputing cluster. This training will be
+    presented by Simon Scheidegger and translates well to projects on any
+    large-scale cluster or cloud computing platform.
+  </p>
+  <p>
+    The director of the OSE Lab is Dr. Richard W. Evans, Associate Director and
+    Senior Lecturer in the M.A. Program in Computational Social Science at the
+    University of Chicago and steering committee member of QuantEcon. This
+    year's Boot Camp is Co-Organized by Richard Evans and
+    <a href="https://sites.google.com/site/simonscheidegger/home">Dr. Simon Scheidegger</a>.
+    Simon is Assistant Professor in the Department of Finance at HEC Lausanne.
+  </p>
+  <p>
+    And finally, as a new addition to the OSE Lab Boot Camp curriculum, we are
+    pleased to announce that this year's Boot Camp will be the first of the next
+    three years of summer camps to include the Econometric Society's Dynamic
+    Structural Economics Workshop during the second week of the OSE Lab Boot
+    Camp, July 8-12. The Dynamic Structural Economics Workshop week is primarily
+    organized by John Rust (Georgetown University), Bertel Schjerning
+    (University of Copenhagen), and Fedor Iskhakov (Australia National
+    University), Sanjog Misra (University of Chicago, Booth), and Gunter Hitsch
+    (University of Chicago, Booth). All OSE Lab students will get to participate
+    in the curriculum instruction during the first half of that week, which will
+    include discrete choice dynamic programming, structural estimation, and
+    dynamic games. Then the students will get to participate in the conference
+    that will take place in the last part of the week.
+  </p>
+
+  <p><strong>Instructors for this summer's Boot Camp will include:</strong></p>
+
+  <ul>
+    <li>Lars Hansen, University of Chicago</li>
+    <li>Felix Kubler, University of Zurich</li>
+    <li>John Rust, Georgetown University</li>
+    <li>Anthony Smith, Jr., Yale University</li>
+  </ul>
+
+  <p><strong>The deadline to apply is March 8, 2019.</strong></p>
+
+  <a href="{{ url_for('bootcamp_application_form') }}" class="btn btn-success btn-lg">
+    Begin Application
+  </a>
+
+
+  <h3 class="mt-5">More information</h3>
+
+  <p>To read comments from students who completed the OSE Lab Boot Camp in past years, <a href="{{ url_for('bootcamp_comments') }}">click here</a>.</p>
+  <p>To read a list of answers to frequently asked questions, <a href="{{ url_for('faq') }}">click here</a>.</p>
+  <p>
+    If the FAQ section does not answer your questions,
+    you can direct any questions to <a href="mailto:rwevans@uchicago.edu">Richard Evans</a>
+    or <a href="mailto:simon.scheidegger@unil.ch">Simon Scheidegger</a>.
+  </p>
+</div>
+
+
+{% endblock %}
