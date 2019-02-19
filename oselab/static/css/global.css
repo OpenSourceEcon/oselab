@@ -4,6 +4,15 @@ body {
   font-family: Roboto, Helvetica, Arial, sans;
 }
 
+a {
+  color: #75140C;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #b9554d;
+}
+
 ol {
   list-style-type: upper-alpha;
 }

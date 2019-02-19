@@ -1,11 +1,23 @@
-{% macro home_slide(title, background_image, body, cover_color='red') -%}
+{% macro home_slide(title, background_image, body, cover_color='red', background_position='center') -%}
   <div
     class="home-slide home-slide--{{cover_color}}"
-    style="background-image: url('{{ background_image }}');"
+    style="
+      background-image: url('{{ background_image }}');
+      background-position: {{ background_position }};
+    "
   >
     <div class="home-slide__content">
-      <h3 class="home-slide__title">{{ title }}</h3>
-      <p>{{ body }}</p>
+      {% if title is not none %}
+        <h3 class="home-slide__title">{{ title }}</h3>
+      {% endif %}
+
+      {% if body is not none %}
+        <div class="home-slide__body">
+          {% filter markdown %}
+          {{ body | dedent }}
+          {% endfilter %}
+        </div>
+      {% endif %}
     </div>
   </div>
 {%- endmacro %}

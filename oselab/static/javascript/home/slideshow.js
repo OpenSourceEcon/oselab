@@ -41,14 +41,14 @@ function incrementSlideIndex(delta) {
 }
 
 function createNavArrows() {
-  var leftArrow = $('.home-slide__arrow--left')
+  $('.home-slide__arrow--left')
     .on('click', function (event) {
       event.preventDefault();
       resetTimers();
       incrementSlideIndex(-1);
       animateSlides();
     });
-  var rightArrow = $('.home-slide__arrow--right')
+  $('.home-slide__arrow--right')
     .on('click', function (event) {
       event.preventDefault();
       resetTimers();
@@ -58,7 +58,7 @@ function createNavArrows() {
 }
 
 function createPips() {
-  $.map(Array(3), function (_, index) {
+  $.map(Array(slides.length), function (_, index) {
     var pip = index === 0
       ? $('<div class="home-slide__pip home-slide__pip--active"></div>')
       : $('<div class="home-slide__pip"></div>');

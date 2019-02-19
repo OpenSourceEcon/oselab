@@ -13,8 +13,9 @@
   padding: 0 40px 0 80px;
 }
 
-.home-header__image {
-  width: 250px;
+.home-header__brand__logo {
+  max-width: 400px;
+  padding-right: 50px;
 }
 
 .home-header__brand__description {
@@ -25,6 +26,11 @@
   line-height: 26px;
   max-width: 450px;
   padding-top: 20px;
+}
+
+.home-header__brand__list {
+  margin-top: 15px;
+  padding-left: 18px;
 }
 
 .home-header__slideshow {

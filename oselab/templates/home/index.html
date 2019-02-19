@@ -3,48 +3,62 @@
 {% block body %}
 <div class="home-header">
   <div class="home-header__brand">
-    <div>
-      <img src="{{ url_for('static', filename='images/ose_lab_logo.png') }}" />
+    <div class="home-header__brand__logo">
+      <img src="{{ url_for('static', filename='images/logo_horizontal.png') }}" class="img-fluid" />
     </div>
     <h2 class="home-header__brand__description">
-        The Open Source Economics Laboratory (OSE Lab) provides training and supports macroeconomic research and open source methods.
+      Open access and open source computational economics
+      <ul class="home-header__brand__list">
+        <li>Curriculum</li>
+        <li>Research</li>
+        <li>Policy</li>
+        <li>Collaboration</li>
+      </ul>
     </h2>
   </div>
   <div class="home-header__slideshow">
     {{
       home_slide(
-        title="OSE Lab Boot Camp",
         body="""
-          The OSE Boot Camp is an intensive and immersive seven-week computational
-          macroeconomics boot camp.
+        ###### It was such a great experience to participate in the [OSE] Bootcamp. After participating in the program, I got a research assistant position simply by just showing the professor my Github and all of the cool Math/Econ/Computation we did in the [OSE] lab.
+
+        _-Alex Weinberg, University of Chicago_
         """,
-        background_image=url_for('static', filename='images/student.jpg'),
+        background_image=url_for('static', filename='images/oselab-home-1.jpg'),
         cover_color="gray"
       )
     }}
 
     {{
       home_slide(
-        title="OSE Lab Boot Camp",
         body="""
-          The OSE Boot Camp is an intensive and immersive seven-week computational
-          macroeconomics boot camp.
+        The 2018 OSE Lab cohort at the end of the Boot Camp in front of Saieh Hall at the University of Chicago (August 3, 2018).
         """,
-        background_image=url_for('static', filename='images/student.jpg')
+        background_image=url_for('static', filename='images/oselab-home-2.jpg')
       )
     }}
 
     {{
       home_slide(
-        title="OSE Lab Boot Camp",
         body="""
-          The OSE Boot Camp is an intensive and immersive seven-week computational
-          macroeconomics boot camp.
+        Lars Hansen instructs OSE Lab students about macro financial modeling, asset pricing, and model uncertainty (July 11, 2018, Saieh Hall, University of Chicago).
         """,
-        background_image=url_for('static', filename='images/student.jpg'),
+        background_image=url_for('static', filename='images/oselab-home-4.jpg'),
+        cover_color="red",
+        background_position="left center",
+      )
+    }}
+
+    {{
+      home_slide(
+        body="""
+        The 2017 OSE Lab cohort at the end of the Boot Camp in front of Saieh Hall at the University of Chicago (August 4, 2017).
+        """,
+        background_image=url_for('static', filename='images/oselab-home-3.jpg'),
         cover_color="gray"
       )
     }}
+
 
     {{ slideshow_pips() }}
     {{ slideshow_arrows() }}
@@ -58,37 +72,32 @@
     <div class="latest-section__cards-container">
       {{
         home_card(
-          title="OSE boot camp 2018",
+          title="Applications open for 2019 OSE Lab Summer Boot Camp",
           body="""
-            Applications for the 2018 OSE lab bootcamp are open and applicants can apply
-            at any time. We are happy to announce new scholarships this year and are excited
-            to read a lot of neat applications like the ones that...
+            Applications are now open for the six-week OSE Lab Summer Boot Camp 2019 at the University of Chicago from July 1 to August 9. The boot camp encourages applications from PhD, masters, and advanced undergraduate students in economics. Admitted students receive a $4,000 stipend and OSE Lab pays for housing and travel to and from Chicago. The deadline to apply is March 15. Follow the link below to learn more and apply.
           """,
-          url="#"
+          link={
+            "url": url_for('bootcamp_2019'),
+            "text": "More information",
+          }
         )
       }}
 
       {{
         home_card(
-          title="OSE boot camp 2018",
+          title="2019 OSE Lab Boot Camp teams up with Econometric Society Dynamic Structural Economics Workshop",
           body="""
-            Applications for the 2018 OSE lab bootcamp are open and applicants can apply
-            at any time. We are happy to announce new scholarships this year and are excited
-            to read a lot of neat applications like the ones that...
+            We are excited to announce that the 2019 OSE Lab Boot Camp has partnered with the Econometric Society Dynamic Structural Economics Workshop and Conference for our summer boot camps for the next three years. This year, during second week of the OSE Lab Boot Camp, July 8 through July 14, OSE Lab students will join with the other participants in the Dynamic Structural Economics Workshop and the associated two-day conference to learn discrete choice dynamic programming, structural estimation, and dynamic games.
           """,
-          url="#"
         )
       }}
 
       {{
         home_card(
-          title="OSE boot camp 2018",
+          title="Evans presents open source policy model in Washington, DC",
           body="""
-            Applications for the 2018 OSE lab bootcamp are open and applicants can apply
-            at any time. We are happy to announce new scholarships this year and are excited
-            to read a lot of neat applications like the ones that...
+            OSE Lab Director [Richard Evans](https://sites.google.com/site/rickecon/) was a speaker at the Policy Simulation Library Meet-up in Washington, DC at the American Enterprise Institute on January 29, 2019. Evans showed participants how to use the open source [OG-USA model](https://github.com/PSLmodels/OG-USA) for dynamic analysis of federal tax policy changes. Video of the talk is available [here](https://youtu.be/jo_PMPipne0?t=622) (Evans talk starts at minute 10:29) and slides from the talk are [here](https://sites.google.com/site/rickecon/PSLmeetup.pdf).
           """,
-          url="#"
         )
       }}
     </div>
