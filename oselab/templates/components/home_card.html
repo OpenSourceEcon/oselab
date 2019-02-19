@@ -1,11 +1,17 @@
-{% macro home_card(title, body, url) -%}
+{% macro home_card(title, body, link = None) -%}
   <div class="home-card">
     <div class="home-card__content">
       <h4 class="home-card__heading">{{ title }}</h4>
-      <p class="home-card__body-content">{{ body }}</p>
-      <p class="home-card__body-content">
-        {{ floating_arrow_link('Continue reading', url) }}
-      </p>
+      <div class="home-card__body-content">
+        {% filter markdown %}
+        {{ body | dedent }}
+        {% endfilter %}
+      </div>
+      {% if link is not none %}
+        <p class="home-card__body-content">
+          {{ floating_arrow_link(link["text"], link["url"]) }}
+        </p>
+      {% endif %}
     </div>
   </div>
 {%- endmacro %}

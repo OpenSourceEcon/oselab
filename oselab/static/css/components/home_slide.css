@@ -56,6 +56,12 @@
   margin-bottom: 20px;
 }
 
+.home-slide__body h6 {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+
 .home-slide__pip-container {
   align-items: center;
   bottom: 15px;

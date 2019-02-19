@@ -26,7 +26,7 @@
 }
 
 .home-card__body-content {
-  font-size: 14px;
+  font-size: 14px!important;
   letter-spacing: 0.22px;
   line-height: 22px;
   margin: 14px 0 0;

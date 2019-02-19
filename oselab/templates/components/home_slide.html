@@ -7,8 +7,17 @@
     "
   >
     <div class="home-slide__content">
-      <h3 class="home-slide__title">{{ title }}</h3>
-      <p>{{ body }}</p>
+      {% if title is not none %}
+        <h3 class="home-slide__title">{{ title }}</h3>
+      {% endif %}
+
+      {% if body is not none %}
+        <div class="home-slide__body">
+          {% filter markdown %}
+          {{ body | dedent }}
+          {% endfilter %}
+        </div>
+      {% endif %}
     </div>
   </div>
 {%- endmacro %}
