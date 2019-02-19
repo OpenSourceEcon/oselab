@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {% block body %}
+{% extends "layout.html" %}
+{% block body %}
 {{
   page_heading(
     title="2019 Open Source Economics Laboratory (OSE Lab) Boot Camp",
@@ -56,7 +57,7 @@
     calculus, real analysis, and writing code in some programming language.
   </p>
 
-  <h4 class="mt-4">Program details</h4>
+  <h3 class="mt-5">Program details</h3>
 
   <p>
     The curriculum of this program includes advanced mathematics, economic
@@ -126,17 +127,21 @@
 
   <p><strong>The deadline to apply is March 8, 2019.</strong></p>
 
-  <a class="btn btn-success btn-lg" href="#">Begin Application</a>
+  <a href="{{ url_for('bootcamp_application_form') }}" class="btn btn-success btn-lg">
+    Begin Application
+  </a>
 
-  <h4 class="mt-4">More information</h4>
 
-  <p>To read comments from students who completed the OSE Lab Boot Camp in past years, click here [link to Comments page].</p>
-  <p>To read a list of answers to frequently asked questions, <a href="/faq">click here</a>.</p>
+  <h3 class="mt-5">More information</h3>
+
+  <p>To read comments from students who completed the OSE Lab Boot Camp in past years, <a href="{{ url_for('bootcamp_comments') }}">click here</a>.</p>
+  <p>To read a list of answers to frequently asked questions, <a href="{{ url_for('faq') }}">click here</a>.</p>
   <p>
     If the FAQ section does not answer your questions,
     you can direct any questions to <a href="mailto:rwevans@uchicago.edu">Richard Evans</a>
     or <a href="mailto:simon.scheidegger@unil.ch">Simon Scheidegger</a>.
   </p>
 </div>
+
 
 {% endblock %}
