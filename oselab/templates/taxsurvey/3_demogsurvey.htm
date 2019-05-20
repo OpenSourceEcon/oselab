@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.main{
+  background-color: #F0F0F0;
+  width: 600px;
+  border: 0px;
+  padding: 100px;
+  margin: 0px;
+  margin-left: 275px
+}
+
+.button {
+  background-color: #D5D5D5;
+  border: none;
+  color: black;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 22px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.button:hover {opacity: 1}
+header {
+  margin: 0;
+  background-color: #8B0021;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+html,body {
+margin:0;
+padding:0;
+}
+
+</style>
+</head>
+
+<body bgcolor="#C0C0C0">
+<header>
+<h1>
+<center>
+  <img src="universityofchicago_logo.png" alt="UChicago Logo" width="250" hspace="0" vertical-align: top;>
+</center>
+</h1>
+</header>
+
+<div class="main">
+<center>
+  <font size="6" face="arial"><b>Demographic Questions</b></font>
+</center>
+
+<form action="" method="get" id="demo_form">
+
+<font size=4px face="arial">
+<br>
+<p>
+<b>Gender: </b><br><br>
+  <input type="radio" name="gender" value="female" checked> Female<br>
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="other"> Other
+</p>
+
+<p>
+<b>Age:</b><br><br>
+  <input type="number" id="age"><br>
+</p>
+
+<p>
+<b>Political Inclination: </b><br><br>
+  <input type="radio" name="party" value="republican" checked> Republican<br>
+  <input type="radio" name="party" value="democrat"> Democrat<br>
+  <input type="radio" name="party" value="independent"> Independent<br>
+  <input type="radio" name="party" value="other"> Other
+</p>
+
+<p>
+<b>Race: </b><br><br>
+  <input class="messageCheckbox" type="checkbox" name="race"   value="white">  White <br>
+  <input class="messageCheckbox" type="checkbox" name="race"  value="indian"> American Indian or Alaska Native <br>
+  <input class="messageCheckbox" type="checkbox" name="race"   value="black">  Black or African American <br>
+  <input class="messageCheckbox" type="checkbox" name="race" value="hispanic"> Hispanic or Latino <br>
+  <input class="messageCheckbox" type="checkbox" name="race"   value="asian">  Asian <br>
+  <input class="messageCheckbox" type="checkbox" name="race"value="hawaiian"> Native Hawaiian or Pacific Islander <br>
+  <input class="messageCheckbox" type="checkbox" name="race"   value="other">  Other <br>
+  <input class="messageCheckbox" type="checkbox" name="race" value="undecided"> Don't know or not sure
+</p>
+
+<p>
+<b>Household Income (in $):</b><br><br>
+  <input type="number" name="income"><br>
+</p>
+</form>
+</font>
+
+<p id="demo"></p>
+
+<p  align="center">
+<a href="2_video.htm", class="button button2"><<</a>
+<a href="4_prefsurvey1.htm", class="button", id="submit">>></a>
+
+<!--
+<a class="button", id="submit">>></a>
+
+</p>
+
+<script type="text/javascript">
+var demo_form = document.getElementById('demo_form');
+document.getElementById("submit").addEventListener("click", function(event)
+{
+  event.preventDefault();
+  var gender = document.querySelector('input[name="gender"]:checked').value;
+  var age = document.getElementById('age').value;
+  var party = document.querySelector('input[name="party"]:checked').value;
+  //var race = document.querySelectorAll('[name="race"]:checked');
+
+  var obj = { "gender": gender, "age": age, "party": party};//, "race": race};
+  var myJSON = JSON.stringify(obj);
+  document.getElementById("demo").innerHTML = myJSON;
+});
+
+</script>
+-->
+</p>
+</div>
+
+</body>
+</html>
