@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.main{
+  background-color: #F0F0F0;
+  width: 600px;
+  border: 0px;
+  padding: 100px;
+  margin: 0px;
+  margin-left: 275px
+}
+
+.button {
+  background-color: #D5D5D5;
+  border: none;
+  color: black;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 22px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.button:hover {opacity: 1}
+header {
+  margin: 0;
+  background-color: #8B0021;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+html,body {
+margin:0;
+padding:0;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 70%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #B44949;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+</style>
+</head>
+
+<body bgcolor="#C0C0C0">
+<header>
+<h1>
+<center>
+  <img src="universityofchicago_logo.png" alt="UChicago Logo" width="250" hspace="0" vertical-align: top;>
+</center>
+</h1>
+</header>
+
+<div class="main">
+<center><h1>Tax Preference Survey 2</h1></center>
+
+<font size="4">
+<p align="justify">
+In this section, you need to respond with your most preferred values for each of the tax variables.
+You can either tick the 'no change' box if you like the existing policy numbers or
+you can move the slider bars to indicate your preferred values.
+</p>
+</font>
+<font size="4">
+
+<!-- Question 1, SS -->
+<p class="slidecontainer" align="justify">
+  1. Maximum taxable earnings for Social Security (current = $127,200):<br>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_SS"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: </b></font><br>
+        $<input type="number" id="max_SS" value="127200"><br>
+      </center>
+    </div>
+  </div>
+</p><br><br><br>
+
+<script>
+var input_SS = document.getElementById("max_SS");
+var checker_maxSS = document.getElementById('checkme_SS');
+
+checker_maxSS.onchange = function() {
+  input_SS.disabled = !!this.checked;
+  if (this.checked) {
+    input_SS.value = "127200";
+    max_SS.style.background = "#AAAAAA";
+  }
+  else {
+    max_SS.style.background = "#d3d3d3";    
+  }
+};
+</script>
+
+<!-- Question 2, LTCG1 -->
+<p class="slidecontainer" align="justify">
+  2. Long-term capital gains and qualified dividends tax rates<br>
+  <center>$0 to $37,950 bracket (current = 0%):</center>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_LTCG1"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: <span id="LTCG1_demo"></span>%</b></font><br>
+        <input type="range" min="0" max="100" value="0" class="slider" id="LTCG1"><br><br><br>
+      </center>
+    </div>
+  </div>
+</p>
+
+<script>
+var slider_LTCG1 = document.getElementById("LTCG1");
+var output_LTCG1 = document.getElementById("LTCG1_demo");
+var checker_LTCG1 = document.getElementById('checkme_LTCG1');
+
+output_LTCG1.innerHTML = slider_LTCG1.value;
+slider_LTCG1.oninput = function() {
+  output_LTCG1.innerHTML = this.value;
+}
+checker_LTCG1.onchange = function() {
+  slider_LTCG1.disabled = !!this.checked;
+  if (this.checked) {
+    slider_LTCG1.value = "0";
+    output_LTCG1.innerHTML = slider_LTCG1.value;
+    LTCG1.style.background = "#AAAAAA";
+  }
+  else {
+    LTCG1.style.background = "#d3d3d3";   
+    output_LTCG1.innerHTML = slider_LTCG1.value;
+  }
+};
+</script>
+
+<!-- Question 3, LTCG2 -->
+<p class="slidecontainer" align="justify">
+  <center>$37,950 to $418,400 bracket (current = 15%):</center>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_LTCG2"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: <span id="LTCG2_demo"></span>%</b></font><br>
+        <input type="range" min="0" max="100" value="15" class="slider" id="LTCG2"><br><br><br>
+      </center>
+    </div>
+  </div>
+</p>
+
+<script>
+var slider_LTCG2 = document.getElementById("LTCG2");
+var output_LTCG2 = document.getElementById("LTCG2_demo");
+var checker_LTCG2 = document.getElementById('checkme_LTCG2');
+
+output_LTCG2.innerHTML = slider_LTCG2.value;
+slider_LTCG2.oninput = function() {
+  output_LTCG2.innerHTML = this.value;
+}
+checker_LTCG2.onchange = function() {
+  slider_LTCG2.disabled = !!this.checked;
+  if (this.checked) {
+    slider_LTCG2.value = "15";
+    output_LTCG2.innerHTML = slider_LTCG2.value;
+    LTCG2.style.background = "#AAAAAA"
+  }
+  else {
+    LTCG2.style.background = "#d3d3d3"    
+    output_LTCG2.innerHTML = slider_LTCG2.value;
+  }
+};
+</script>
+
+<!-- Question 4, LTCG3 -->
+<p class="slidecontainer" align="justify">
+  <center>$418,400+ bracket (current = 20%):</center>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_LTCG3"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: <span id="LTCG3_demo"></span>%</b></font><br>
+        <input type="range" min="0" max="100" value="20" class="slider" id="LTCG3"><br><br><br>
+      </center>
+    </div>
+  </div>
+</p>
+
+<script>
+var slider_LTCG3 = document.getElementById("LTCG3");
+var output_LTCG3 = document.getElementById("LTCG3_demo");
+var checker_LTCG3 = document.getElementById('checkme_LTCG3');
+
+output_LTCG3.innerHTML = slider_LTCG3.value;
+slider_LTCG3.oninput = function() {
+  output_LTCG3.innerHTML = this.value;
+}
+checker_LTCG3.onchange = function() {
+  slider_LTCG3.disabled = !!this.checked;
+  if (this.checked) {
+    slider_LTCG3.value = "20";
+    output_LTCG3.innerHTML = slider_LTCG3.value;
+    LTCG3.style.background = "#AAAAAA"
+  }
+  else {
+    LTCG3.style.background = "#d3d3d3"    
+    output_LTCG3.innerHTML = slider_LTCG3.value;
+  }
+};
+</script>
+
+<!-- Question 5, PI1 -->
+<p class="slidecontainer" align="justify">
+  3. Regular personal income (non-AMT, non-pass-through)<br>
+  <center>$0 to $9,700 bracket (current = 10%):</center>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_PI1"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: <span id="PI1_demo"></span>%</b></font><br>
+        <input type="range" min="0" max="100" value="10" class="slider" id="PI1"><br><br><br>
+      </center>
+    </div>
+  </div>
+</p>
+
+<script>
+var slider_PI1 = document.getElementById("PI1");
+var output_PI1 = document.getElementById("PI1_demo");
+var checker_PI1 = document.getElementById('checkme_PI1');
+
+output_PI1.innerHTML = slider_PI1.value;
+slider_PI1.oninput = function() {
+  output_PI1.innerHTML = this.value;
+}
+checker_PI1.onchange = function() {
+  slider_PI1.disabled = !!this.checked;
+  if (this.checked) {
+    slider_PI1.value = "10";
+    output_PI1.innerHTML = slider_PI1.value;
+    PI1.style.background = "#AAAAAA"
+  }
+  else {
+    PI1.style.background = "#d3d3d3"    
+    output_PI1.innerHTML = slider_PI1.value;
+  }
+};
+</script>
+
+<!-- Question 6, PI2 -->
+<p class="slidecontainer" align="justify">
+  <center>$9,701 to $39,475 bracket (current = 12%):</center>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_PI2"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: <span id="PI2_demo"></span>%</b></font><br>
+        <input type="range" min="0" max="100" value="12" class="slider" id="PI2"><br><br><br>
+      </center>
+    </div>
+  </div>
+</p>
+
+<script>
+var slider_PI2 = document.getElementById("PI2");
+var output_PI2 = document.getElementById("PI2_demo");
+var checker_PI2 = document.getElementById('checkme_PI2');
+
+output_PI2.innerHTML = slider_PI2.value;
+slider_PI2.oninput = function() {
+  output_PI2.innerHTML = this.value;
+}
+checker_PI2.onchange = function() {
+  slider_PI2.disabled = !!this.checked;
+  if (this.checked) {
+    slider_PI2.value = "12";
+    output_PI2.innerHTML = slider_PI2.value;
+    PI2.style.background = "#AAAAAA"
+  }
+  else {
+    PI2.style.background = "#d3d3d3"    
+    output_PI2.innerHTML = slider_PI2.value;
+  }
+};
+</script>
+
+<!-- Question 7, PI3 -->
+<p class="slidecontainer" align="justify">
+  <center>$39,476 to $84,200 bracket (current = 22%):</center>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_PI3"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: <span id="PI3_demo"></span>%</b></font><br>
+        <input type="range" min="0" max="100" value="22" class="slider" id="PI3"><br><br><br>
+      </center>
+    </div>
+  </div>
+</p>
+
+<script>
+var slider_PI3 = document.getElementById("PI3");
+var output_PI3 = document.getElementById("PI3_demo");
+var checker_PI3 = document.getElementById('checkme_PI3');
+
+output_PI3.innerHTML = slider_PI3.value;
+slider_PI3.oninput = function() {
+  output_PI3.innerHTML = this.value;
+}
+checker_PI3.onchange = function() {
+  slider_PI3.disabled = !!this.checked;
+  if (this.checked) {
+    slider_PI3.value = "22";
+    output_PI3.innerHTML = slider_PI3.value;
+    PI3.style.background = "#AAAAAA"
+  }
+  else {
+    PI3.style.background = "#d3d3d3"   
+    output_PI3.innerHTML = slider_PI3.value; 
+  }
+};
+</script>
+
+<!-- Question 8, PI4 -->
+<p class="slidecontainer" align="justify">
+  <center>$84,201 to $160,725 bracket (current = 24%):</center>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_PI4"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: <span id="PI4_demo"></span>%</b></font><br>
+        <input type="range" min="0" max="100" value="24" class="slider" id="PI4"><br><br><br>
+      </center>
+    </div>
+  </div>
+</p>
+
+<script>
+var slider_PI4 = document.getElementById("PI4");
+var output_PI4 = document.getElementById("PI4_demo");
+var checker_PI4 = document.getElementById('checkme_PI4');
+
+output_PI4.innerHTML = slider_PI4.value;
+slider_PI4.oninput = function() {
+  output_PI4.innerHTML = this.value;
+}
+checker_PI4.onchange = function() {
+  slider_PI4.disabled = !!this.checked;
+  if (this.checked) {
+    slider_PI4.value = "24";
+    output_PI4.innerHTML = slider_PI4.value;
+    PI4.style.background = "#AAAAAA"
+  }
+  else {
+    PI4.style.background = "#d3d3d3"    
+    output_PI4.innerHTML = slider_PI4.value;
+  }
+};
+</script>
+
+<!-- Question 9, PI5 -->
+<p class="slidecontainer" align="justify">
+  <center>$160,726 to $204,100 bracket (current = 32%):</center>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_PI5"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: <span id="PI5_demo"></span>%</b></font><br>
+        <input type="range" min="0" max="100" value="32" class="slider" id="PI5"><br><br><br>
+      </center>
+    </div>
+  </div>
+</p>
+
+<script>
+var slider_PI5 = document.getElementById("PI5");
+var output_PI5 = document.getElementById("PI5_demo");
+var checker_PI5 = document.getElementById('checkme_PI5');
+
+output_PI5.innerHTML = slider_PI5.value;
+slider_PI5.oninput = function() {
+  output_PI5.innerHTML = this.value;
+}
+checker_PI5.onchange = function() {
+  slider_PI5.disabled = !!this.checked;
+  if (this.checked) {
+    slider_PI5.value = "32";
+    output_PI5.innerHTML = slider_PI5.value;
+    PI5.style.background = "#AAAAAA"
+  }
+  else {
+    PI5.style.background = "#d3d3d3"    
+    output_PI5.innerHTML = slider_PI5.value;
+  }
+};
+</script>
+
+<!-- Question 10, PI6 -->
+<p class="slidecontainer" align="justify">
+  <center>$204,101 to $510,300 bracket (current = 35%):</center>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_PI6"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: <span id="PI6_demo"></span>%</b></font><br>
+        <input type="range" min="0" max="100" value="35" class="slider" id="PI6"><br><br><br>
+      </center>
+    </div>
+  </div>
+</p>
+
+<script>
+var slider_PI6 = document.getElementById("PI6");
+var output_PI6 = document.getElementById("PI6_demo");
+var checker_PI6 = document.getElementById('checkme_PI6');
+
+output_PI6.innerHTML = slider_PI6.value;
+slider_PI6.oninput = function() {
+  output_PI6.innerHTML = this.value;
+}
+checker_PI6.onchange = function() {
+  slider_PI6.disabled = !!this.checked;
+  if (this.checked) {
+    slider_PI6.value = "35";
+    output_PI6.innerHTML = slider_PI6.value;
+    PI6.style.background = "#AAAAAA"
+  }
+  else {
+    PI6.style.background = "#d3d3d3"    
+    output_PI6.innerHTML = slider_PI6.value;
+  }
+};
+</script>
+
+<!-- Question 11, PI7 -->
+<p class="slidecontainer" align="justify">
+  <center>$510,300+ bracket (current = 37%):</center>
+
+  <div style="width:680px;">
+    <div style="width:150px; float:left;">
+      <center>
+        <font size = "3"><b>Don't change:</b></font><br>
+        <input type="checkbox" id="checkme_PI7"/>
+      </center>
+    </div>
+    <div style="width:530px; float:left;">
+      <center>
+        <font size = "3"><b>New value: <span id="PI7_demo"></span>%</b></font><br>
+        <input type="range" min="0" max="100" value="37" class="slider" id="PI7"><br><br><br>
+      </center>
+    </div>
+  </div>
+</p>
+
+<script>
+var slider_PI7 = document.getElementById("PI7");
+var output_PI7 = document.getElementById("PI7_demo");
+var checker_PI7 = document.getElementById('checkme_PI7');
+
+output_PI7.innerHTML = slider_PI7.value;
+slider_PI7.oninput = function() {
+  output_PI7.innerHTML = this.value;
+}
+checker_PI7.onchange = function() {
+  slider_PI7.disabled = !!this.checked;
+  if (this.checked) {
+    slider_PI7.value = "37";
+    output_PI7.innerHTML = slider_PI7.value;
+    PI7.style.background = "#AAAAAA"
+  }
+  else {
+    PI7.style.background = "#d3d3d3"    
+    output_PI7.innerHTML = slider_PI7.value;
+  }
+};
+</script>
+
+
+<p  align="center">
+<a href="", class="button button2"><<</a>
+<a href="7_end.htm", class="button">>></a>
+</p>
+
+</div>
+</font>
+</body>
+</html>
