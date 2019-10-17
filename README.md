@@ -23,4 +23,4 @@ The app will run locally at `localhost:5000`.
 
 ## Running tests
 
-To run the test suite, run `python oselab/tests/views_test.py` from the repo root.
+To run the test suite, make sure you have installed the oselab package by running `pip install -e .`. Then run `python oselab/tests/views_test.py` from the repo root.
