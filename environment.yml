@@ -2,10 +2,11 @@ name: oselab
 channels:
   - defaults
 dependencies:
-  - python=3.6
+  - python=3.6.9
   - flask=1.0.2
   - gunicorn
   - Pygments=2.2.0
+  - pip
   - pip:
     - Flask-Assets
     - Flask-Markdown
