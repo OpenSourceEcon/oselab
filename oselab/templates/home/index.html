@@ -72,14 +72,23 @@
     <div class="latest-section__cards-container">
       {{
         home_card(
-          title="Applications open for 2019 OSE Lab Summer Boot Camp",
+          title="2020 OSE Lab Summer Boot Camp Postponed",
           body="""
-            Applications are now open for the six-week OSE Lab Summer Boot Camp 2019 at the University of Chicago from July 1 to August 9. The boot camp encourages applications from PhD, masters, and advanced undergraduate students in economics. Admitted students receive a $4,000 stipend and OSE Lab pays for housing and travel to and from Chicago. The deadline to apply is March 15. Follow the link below to learn more and apply.
+            We are sorry to announce that OSE Lab will not be hosting the boot camp this summer 2020 due to our funding not being renewed. We are grateful for the generous support of the Charles Koch Foundation and University of Chicago over the last three years. OSE Lab will be searching for new funding for a summer 2021 boot camp and beyond. In the meantime, OSE Lab will continue to support its current research initiatives and student researchers. Thanks to all the students, instructors, and staff who have made the OSE Lab such a stimulating and collaborative network over the last three years. We look forward to continued future developments.
           """,
           link={
-            "url": url_for('bootcamp_2019'),
-            "text": "More information",
+            "url": url_for('bootcamp_2020'),
+            "text": "2020 boot camp postponed announcement",
           }
+        )
+      }}
+
+      {{
+        home_card(
+          title="2020 Econometric Society Dynamic Structural Economics Workshop and Conference",
+          body="""
+            The Econometric Society Dynamic Structural Econometrics Summer School and Conference will be held At the University of Zurich (UZH) in Zurich, Switzerland, June 15-21, 2020. The theme is''Methodology and Applications in Environmental Economics and Climate Change''. The main page for information about the summer school and conference is [https://dseconf.org/](https://dseconf.org/).
+          """,
         )
       }}
 
@@ -88,15 +97,6 @@
           title="2019 OSE Lab Boot Camp teams up with Econometric Society Dynamic Structural Economics Workshop",
           body="""
             We are excited to announce that the 2019 OSE Lab Boot Camp has partnered with the Econometric Society Dynamic Structural Economics Workshop and Conference for our summer boot camps for the next three years. This year, during second week of the OSE Lab Boot Camp, July 8 through July 14, OSE Lab students will join with the other participants in the Dynamic Structural Economics Workshop and the associated two-day conference to learn discrete choice dynamic programming, structural estimation, and dynamic games.
-          """,
-        )
-      }}
-
-      {{
-        home_card(
-          title="Evans presents open source policy model in Washington, DC",
-          body="""
-            OSE Lab Director [Richard Evans](https://sites.google.com/site/rickecon/) was a speaker at the Policy Simulation Library Meet-up in Washington, DC at the American Enterprise Institute on January 29, 2019. Evans showed participants how to use the open source [OG-USA model](https://github.com/PSLmodels/OG-USA) for dynamic analysis of federal tax policy changes. Video of the talk is available [here](https://youtu.be/jo_PMPipne0?t=622) (Evans talk starts at minute 10:29) and slides from the talk are [here](https://sites.google.com/site/rickecon/PSLmeetup.pdf).
           """,
         )
       }}
