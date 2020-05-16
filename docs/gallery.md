@@ -4,7 +4,7 @@
 
 ### Add a new route for your visualization
 
-in `views.py`, add a new route for your visualization. It will look something like this:
+In [`views.py`](https://github.com/OpenSourceEcon/oselab/blob/master/oselab/views.py), add a new route for your visualization. It will look something like this:
 
 ```python
 @app.route('/gallery/my_viz')
