@@ -1,4 +1,4 @@
-certifi==2020.05.16
+certifi==2020.4.5.1
 Click==7.0
 Flask==1.1.2
 Flask-Assets==2.0
