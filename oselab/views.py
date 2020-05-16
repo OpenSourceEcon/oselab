@@ -64,6 +64,15 @@ def gallery():
     return render_template('gallery/index.html', title=build_page_title('Gallery'))
 
 
+@app.route('/gallery/djia_npp_mth')
+def DJIA_NormPeakPlot():
+    """
+    Serve up the DJIA normalized peak plot viz
+    """
+    return render_template('gallery/djia_npp_mth.html',
+                           title=build_page_title('DJIA Normalized Peak Plot'))
+
+
 @app.route('/gallery/marginal_effective_corporate_taxes')
 def marginal_effective_corporate_taxes():
     """
