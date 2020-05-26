@@ -12,6 +12,18 @@
 <div class="container py-4">
   {{
     gallery_item(
+      title="DJIA Normalized Peak Plot",
+      body="""
+        Explore the performance of the Dow Jones Industrial Average in the
+        initial months of the last 15 recessions (1929-2020).
+        """,
+      url="/gallery/djia_npp_mth",
+      image=url_for('static', filename='images/djia_npp_mth.png'),
+    )
+  }}
+
+  {{
+    gallery_item(
       title="Overlapping Generations Model",
       body="""
         Explore various aggregate and individual macroeconomic variables over time
