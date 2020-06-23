@@ -8,7 +8,7 @@
 {{
   page_heading(
     title="U.S. Total Nonfarm Employment Normalized Peak Plot over last 15 Recessions (1929-2020)",
-    body="Explore the progress of U.S. total nonfarm monthly employment (PAYEMS, seasonally adjusted) in the first months of the last 15 recessions (1929-2020). [Updated June 23, 2020]",
+    body="Explore the progress of U.S. total nonfarm employment (PAYEMS, monthly, seasonally adjusted) in the first months of the last 15 recessions (1929-2020). [Updated June 23, 2020]",
   )
 }}
 
@@ -65,11 +65,11 @@
   <h3>About this visualization</h3>
   <p>I (<a href="https://sites.google.com/site/rickecon/">Richard Evans</a>) first created a version of this plot using STATA in early 2009 during the Great Recession (Dec. 2007 to June 2009), which I posted and wrote about on the now defunct Econosseur.com blog. The updated dynamic visualization on this page was created using the Python prgramming language and the Bokeh plotting library. It shows U.S. total nonfarm employment (PAYEMS, monthly, seasonally adjusted) during the last 15 recessions, from the Great Depression that started in 1929 to the current COVID-19 recession that started in February 2020. I take the PAYEMS total at the beginning of the recession and normalize its value to 1. This plot, therefore, shows the percent deviation of the PAYEMS series during each recession relative to its peak at the beginning of the recession. It is a way to compare severity and duration of recession shocks to stock prices across different recessions in different time periods.</p>
 
-  <p>Back in 2009, I wanted to highlight how bad the effect of the Great Recession was on the U.S. labor market. This plot shows that the current COVID-19 recession has had a historic negative effect on U.S. jobs, with a nearly 13% decline in the first three months of the recession. None of the previous 14 recessions have come close, with a 2.4% decline being the biggest. You’ll notice that it wasn’t until October 2008, one year after the peak Dow, that its stock decline began to rival that of the Great Depression. If you were to look at a version of this plot that went out three years from the peak, you would see that the stock decline of the Great Recession was deeper than 12 of the previous 13 recessions, where the only exception was the Great Depression.</p>
+  <p>Back in 2009, I wanted to highlight how bad the effect of the Great Recession was on the U.S. labor market. This plot shows that the current COVID-19 recession (started Feb. 2020) has had a historic negative effect on U.S. jobs, with a nearly 13% decline in the first three months of the recession. None of the previous 14 recessions have come close, with a 2.4% decline being the biggest.</p>
 
-  <p>My first recent update of this plot was published in a <em property="italic">Quantitative Note</em> entitled, “<a href="https://www.openrg.com/reports/QN_CoronaDow.pdf">Stock Price Perspective on Coronavirus Crash</a>” (March 20, 2020). This piece and visualization detailed how the DJIA had dropped 37% in less than 40 days by early March 2020, which was nearly twice as big as any 40-day percent drop in any of the 14 previous recessions including the Great Depression.</p>
+  <p>The data underlying the visualization on this page default to showing PAYEMS series values in the 15 recessions from 2 months before the peak to 12 months after the peak. However, the data here are available to be viewed from 48 months (4 years) before the peak to 96 months (8 years) after the peak.
 
-  <p>The data underlying the visualization on this page default to showing DJIA index values in the 15 recessions from 1 month before the peak to 8 months after the peak. However, the data here are available to be views from 3 months before the peak to 12 months after the peak.
+  <p>The monthly PAYEMS data series begins in January 1939. The U.S. Bureau of Labor Statistics published an annual survey of U.S. nonfarm employment which provided an annual average nonfarm payroll employment (not seasonally adjusted) for the years 1919-1938. I set the date values for annual average data to July 1 of that year. These data are taken from Table 1 on page 1 of the Bureau of Labor Statistics' "<a href="https://fraser.stlouisfed.org/title/employment-earnings-united-states-189/employment-hours-earnings-united-states-1909-90-5435/content/pdf/emp_bmark_1909_1990_v1">Employment, Hours, and Earnings, United States, 1909-90, Volume I</a>," Bulletin (1991). In order to have monthly data, I imputed the missing months as a cubic spline that connected the annual data from July 1919 to July 1938 to the first two months of 1939 (January and February 1939). These annual data are stored as a .csv file (<a href="https://github.com/OpenSourceEcon/USempl_NormPeakPlot/blob/master/data/usempl_anual_1919-1938.csv">usempl_anual_1919-1938.csv</a>) in the visualization's GitHub repository.</p> The imputation takes place in the <a href="https://github.com/OpenSourceEcon/USempl_NormPeakPlot/blob/master/usempl_npp_bokeh.py">usempl_npp_bokeh.py</a> file in the GitHub repository and the final PAYEMS monthly data series from 1919-07 to 2020-05 with the imputed months is <a href="https://github.com/OpenSourceEcon/USempl_NormPeakPlot/blob/master/data/usempl_2020-05-01.csv">usempl_2020-05-01.csv</a>.
 
   <h4>Functionality of the dynamic visualization</h4>
 
@@ -87,18 +87,18 @@
 
   <h4>Contributing to this visualization code</h4>
 
-  <p>This dynamic visualization was created using the scripts written in the Python programming language. I used the Bokeh plotting library to create the JavaScript for the visualization. All of the scripts, data, and detailed documentation are available on the GitHub page for this visualization (<a href="https://github.com/OpenSourceEcon/DJIA_NormPeakPlot">https://github.com/OpenSourceEcon/DJIA_NormPeakPlot</a>). You can fork that repository and follow the instructions in the <a href="https://github.com/OpenSourceEcon/DJIA_NormPeakPlot/blob/master/README.md">README.md</a> to create and modify this visualization on your own machine. If you wish to improve or enhance this code or if you find errors or bugs, please consider the following ways to contribute to this project.</p>
+  <p>This dynamic visualization was created using the scripts written in the Python programming language. I used the Bokeh plotting library to create the JavaScript for the visualization. All of the scripts, data, and detailed documentation are available on the GitHub page for this visualization (<a href="https://github.com/OpenSourceEcon/USempl_NormPeakPlot">https://github.com/OpenSourceEcon/USempl_NormPeakPlot</a>). You can fork that repository and follow the instructions in the <a href="https://github.com/OpenSourceEcon/USempl_NormPeakPlot/blob/master/README.md">README.md</a> to create and modify this visualization on your own machine. If you wish to improve or enhance this code or if you find errors or bugs, please consider the following ways to contribute to this project.</p>
   <ul>
-    <li>Browse the repository <a href="https://github.com/OpenSourceEcon/DJIA_NormPeakPlot/issues">Issues</a> for known areas that need attention.</li>
-    <li>Submit questions or suggestions by submitting a new issue in the repository <a href="https://github.com/OpenSourceEcon/DJIA_NormPeakPlot/issues">Issues</a>.</li>
+    <li>Browse the repository <a href="https://github.com/OpenSourceEcon/USempl_NormPeakPlot/issues">Issues</a> for known areas that need attention.</li>
+    <li>Submit questions or suggestions by submitting a new issue in the repository <a href="https://github.com/OpenSourceEcon/USempl_NormPeakPlot/issues">Issues</a>.</li>
     <li>Submit a pull request with your proposed changes.</li>
   </ul>
 
   <hr>
 
   <h4>References</h4>
-  <p>Evans, Richard W., “<a href="https://www.openrg.com/reports/QN_CoronaDow.pdf">Stock Price Perspective on Coronavirus Crash</a>,” <em property="italic">Quantitative Notes</em>, 2020-1 (March 20, 2020).</p>
-  <p>Evans, Richard W., “Code for creating normalized peak plot of Dow Jones Industrial Average (DJIA) in last 15 recessions,” <a href="https://github.com/OpenSourceEcon/DJIA_NormPeakPlot">https://github.com/OpenSourceEcon/DJIA_NormPeakPlot</a>, (June 10, 2020).</p>
+  <p>Bureau of Labor Statistics, "<a href="https://fraser.stlouisfed.org/title/employment-earnings-united-states-189/employment-hours-earnings-united-states-1909-90-5435/content/pdf/emp_bmark_1909_1990_v1">Employment, Hours, and Earnings, United States, 1909-90, Volume I</a>," Bulletin of the United States Bureau of Labor Statistics, No. 2370 (March 1991).</p>
+  <p>Evans, Richard W., “Code for creating normalized peak plot of U.S. nonfarm employment (PAYEMS) in last 15 recessions,” <a href="https://github.com/OpenSourceEcon/USempl_NormPeakPlot">https://github.com/OpenSourceEcon/USempl_NormPeakPlot</a>, (June 22, 2020).</p>
 
 </div>
 
