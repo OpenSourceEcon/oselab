@@ -77,7 +77,8 @@ def djia_npp_mth():
     """
     Serve up the DJIA normalized peak plot viz
     """
-    return render_template('gallery/djia_npp_mth.html', title=build_page_title('DJIA Normalized Peak Plot'))
+    return render_template('gallery/djia_npp_mth.html',
+                           title=build_page_title('DJIA Normalized Peak Plot'))
 
 
 @app.route('/gallery/marginal_effective_corporate_taxes')
