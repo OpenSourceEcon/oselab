@@ -1,0 +1,21 @@
+{% macro tutorials_item(title, body, url, image) -%}
+  <div class="py-sm-5 py-4">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-8 offset-2 offset-sm-0 pb-4 pb-sm-0">
+        <a href="{{ url }}">
+          <img src="{{ image }}" class="img-fluid" />
+        </a>
+      </div>
+      <div class="col-md-9 col-sm-6 col-12">
+        <a href="{{ url }}" class="text-chicago">
+          <h2>
+            {{ title }}
+          </h2>
+        </a>
+        <hr>
+        <p>{{ body }}</p>
+        {{ floating_arrow_link('View tutorial', url) }}
+      </div>
+    </div>
+  </div>
+{%- endmacro %}

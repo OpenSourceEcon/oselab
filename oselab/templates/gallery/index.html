@@ -12,6 +12,19 @@
 <div class="container py-4">
   {{
     gallery_item(
+      title="U.S. Real GDP Normalized Peak Plot",
+      body="""
+      Explore the progress of U.S. real GDP (GDPC1, quarterly,
+      seasonally adjusted, $billions 2012 chained) in the first quarters
+      of the last 15 recessions (1929-2020).
+      """,
+      url="/gallery/usgdp_npp",
+      image=url_for('static', filename='images/usgdp_npp.png'),
+    )
+  }}
+
+  {{
+    gallery_item(
       title="U.S. Total Nonfarm Employment Normalized Peak Plot",
       body="""
       Explore the progress of U.S. total nonfarm employment (PAYEMS, monthly,
