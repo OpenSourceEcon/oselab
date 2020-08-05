@@ -24,6 +24,7 @@ stylesheets = Bundle(
   'css/components/*.css',
   'css/home/*.css',
   'css/gallery/*.css',
+  'css/tutorials/*.css',
   'css/faq/*.css',
   'css/bootcamp/*.css',
   output='build/main-%(version)s.css'

@@ -1,6 +1,7 @@
 {% from 'components/floating_arrow_link.html' import floating_arrow_link with context %}
 
 {% from 'components/gallery_item.html' import gallery_item with context %}
+{% from 'components/tutorials_item.html' import tutorials_item with context %}
 {% from 'components/home_card.html' import home_card with context %}
 {% from 'components/home_slide.html' import home_slide with context %}
 {% from 'components/slideshow_arrows.html' import slideshow_arrows with context %}
@@ -54,6 +55,10 @@
 
           <li class="nav-item ose-nav-item">
             <a class="nav-link" href="{{ url_for('gallery') }}">Gallery</a>
+          </li>
+
+          <li class="nav-item ose-nav-item">
+            <a class="nav-link" href="{{ url_for('tutorials') }}">Tutorials</a>
           </li>
 
           <li class="nav-item ose-nav-item">
