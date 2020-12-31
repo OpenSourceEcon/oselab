@@ -35,12 +35,12 @@ def bootcamp_2019():
     """
     return render_template('/bootcamp/2019.html', title=build_page_title('2019 Boot Camp'))
 
-@app.route('/bootcamp/2020')
-def bootcamp_2020():
+@app.route('/bootcamp/current')
+def bootcamp_current():
     """
-    Show the 2020 bootcamp page
+    Show the current bootcamp status page
     """
-    return render_template('/bootcamp/2020.html', title=build_page_title('2020 Boot Camp Postponed'))
+    return render_template('/bootcamp/current.html', title=build_page_title('Current OSE Lab Boot Camp status'))
 
 @app.route('/bootcamp/application_form')
 def bootcamp_application_form():
