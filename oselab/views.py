@@ -79,12 +79,12 @@ def usempl_npp():
     return render_template('gallery/usempl_npp.html',
                            title=build_page_title('U.S. Total Nonfarm Employment Normalized Peak Plot'))
 
-@app.route('/gallery/djia_npp_mth')
-def djia_npp_mth():
+@app.route('/gallery/djia_npp')
+def djia_npp():
     """
     Serve up the DJIA normalized peak plot viz
     """
-    return render_template('gallery/djia_npp_mth.html',
+    return render_template('gallery/djia_npp.html',
                            title=build_page_title('DJIA Normalized Peak Plot'))
 
 @app.route('/gallery/marginal_effective_corporate_taxes')
