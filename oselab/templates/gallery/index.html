@@ -12,6 +12,18 @@
 <div class="container py-4">
   {{
     gallery_item(
+      title="Comparison of CBO U.S. Debt-to-GDP Forecasts Plot",
+      body="""
+      Explore this visualization that compares 16 CBO forecasts from 2009 to
+      2021 of U.S. publicly held debt as a percent of GDP.
+      """,
+      url="/gallery/tseries_pubdebt_gdp_frcsts",
+      image=url_for('static', filename='images/tseries_pubdebt_gdp_frcsts.png'),
+    )
+  }}
+
+  {{
+    gallery_item(
       title="U.S. Real GDP Normalized Peak Plot",
       body="""
       Explore the progress of U.S. real GDP (GDPC1, quarterly,
