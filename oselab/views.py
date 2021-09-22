@@ -63,6 +63,14 @@ def gallery():
     """
     return render_template('gallery/index.html', title=build_page_title('Gallery'))
 
+@app.route('/gallery/tseries_pubdebt_gdp_frcsts')
+def tseries_pubdebt_gdp_frcsts():
+    """
+    Serve up the comparison of CBO debt-to-GDP forecasts plot viz
+    """
+    return render_template('gallery/tseries_pubdebt_gdp_frcsts.html',
+                           title=build_page_title('Comparison of CBO U.S. Debt-to-GDP Forecasts'))
+
 @app.route('/gallery/usgdp_npp')
 def usgdp_npp():
     """
