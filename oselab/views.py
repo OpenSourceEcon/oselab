@@ -63,6 +63,14 @@ def gallery():
     """
     return render_template('gallery/index.html', title=build_page_title('Gallery'))
 
+@app.route('/gallery/fedfundsplot')
+def fedfundsplot():
+    """
+    Serve up the U.S. federal funds effective rate and target plot
+    """
+    return render_template('gallery/fedfundsplot.html',
+                           title=build_page_title('U.S. Federal Funds Effective Rate and Target Plot'))
+
 @app.route('/gallery/tseries_pubdebt_gdp_frcsts')
 def tseries_pubdebt_gdp_frcsts():
     """
