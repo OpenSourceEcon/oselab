@@ -36,4 +36,4 @@ jobs:
         shell: bash -l {0}
         working-directory: ./
         run: |
-          python -m pytest
+          pytest
