@@ -31,7 +31,7 @@ jobs:
       - name: Build
         shell: bash -l {0}
         run: |
-          pip install -e . --user
+          pip install -e .
       - name: Test
         shell: bash -l {0}
         working-directory: ./
