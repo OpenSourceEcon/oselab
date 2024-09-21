@@ -1,0 +1,36 @@
+name: Test site functionality
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ["3.12"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Setup Miniconda using Python ${{ matrix.python-version }}
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-variant: Mambaforge
+          auto-update-conda: true
+          activate-environment: oselab-dev
+          environment-file: environment.yml
+          python-version: ${{ matrix.python-version }}
+          auto-activate-base: false
+      - name: Build
+        shell: bash -l {0}
+        run: |
+          pip install -e .
+      - name: Test
+        shell: bash -l {0}
+        working-directory: ./
+        run: |
+          pytest
