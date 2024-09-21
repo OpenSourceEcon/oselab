@@ -1,4 +1,4 @@
-name: oselab
+name: oselab-dev
 channels:
   - defaults
 dependencies:
