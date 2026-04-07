@@ -30,9 +30,20 @@
 
   <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/bootstrap.min.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  {% assets 'stylesheets' %}
-    <link rel="stylesheet" href="{{ ASSET_URL }}">
-  {% endassets %}
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/pygment.css">
+  <link rel="stylesheet" href="/assets/css/components/floating_arrow_link.css">
+  <link rel="stylesheet" href="/assets/css/components/home_card.css">
+  <link rel="stylesheet" href="/assets/css/components/home_slide.css">
+  <link rel="stylesheet" href="/assets/css/components/page_heading.css">
+  <link rel="stylesheet" href="/assets/css/home/about.css">
+  <link rel="stylesheet" href="/assets/css/home/index.css">
+  <link rel="stylesheet" href="/assets/css/gallery/index.css">
+  <link rel="stylesheet" href="/assets/css/tutorials/index.css">
+  <link rel="stylesheet" href="/assets/css/faq/faq_question.css">
+  <link rel="stylesheet" href="/assets/css/bootcamp/comment.css">
+  <link rel="stylesheet" href="/assets/css/bootcamp/2019.css">
 </head>
 
 <html>
@@ -96,7 +107,9 @@
       </div>
     </footer>
 
-    {% assets 'vendor_javascripts' %}<script type="text/javascript" src="{{ ASSET_URL }}"></script>{% endassets %}
-    {% assets 'javascripts' %}<script type="text/javascript" src="{{ ASSET_URL }}"></script>{% endassets %}
+    <script type="text/javascript" src="/assets/vendor/javascript/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="/assets/vendor/javascript/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/vendor/javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/javascript/home/slideshow.js"></script>
   </body>
 </html>

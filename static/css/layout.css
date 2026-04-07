@@ -1,0 +1,13 @@
+.ose-main {
+  min-height: 75vh;
+}
+
+.ose-navbar-logo {
+  margin-top: -6px;
+  width: 100px;
+}
+
+.footer-container {
+  margin: auto;
+  max-width: 1440px;
+}

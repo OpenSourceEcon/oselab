@@ -1,0 +1,8 @@
+{% macro slideshow_arrows() %}
+  <div class="home-slide__arrow home-slide__arrow--left">
+    <img class="home-slide__arrow__icon" alt="Previous slide" src="{{ url_for('static', filename='images/chevron-left.svg') }}" />
+  </div>
+  <div class="home-slide__arrow home-slide__arrow--right">
+    <img class="home-slide__arrow__icon" alt="Next slide" src="{{ url_for('static', filename='images/chevron-right.svg') }}" />
+  </div>
+{%- endmacro %}

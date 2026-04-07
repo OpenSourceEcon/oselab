@@ -1,0 +1,14 @@
+.comment__quote {
+  border-left: 3px solid #dfdfdf;
+  padding: 10px 15px;
+  margin: 40px 0;
+}
+
+.comment__footer {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.comment__footer:before {
+  content: "\2014 \00A0";
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.main{
+  background-color: #F0F0F0;
+  width: 600px;
+  border: 0px;
+  padding: 100px;
+  margin: 0px;
+  margin-left: 275px
+}
+
+.button {
+  background-color: #D5D5D5;
+  border: none;
+  color: black;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 22px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.button:hover {opacity: 1}
+header {
+  margin: 0;
+  background-color: #8B0021;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+html,body {
+margin:0;
+padding:0;
+}
+
+</style>
+</head>
+
+<body bgcolor="#C0C0C0">
+<header>
+<h1>
+<center>
+  <img src="universityofchicago_logo.png" alt="UChicago Logo" width="250" hspace="0" vertical-align: top;>
+</center>
+</h1>
+</header>
+
+<div class="main">
+<center>
+  <font size="5" face="arial">
+    <p>
+      Please copy paste this code to MTurk to process payment:
+    <b><script>
+   document.write(Math.random().toString(36).substr(2, 5));
+    </script></b>
+    </p>
+    <font size="6" face="arial"><i>Thank you!</i><br></font>
+  </font>
+</center>
+</div>
+</body>
+</html>
