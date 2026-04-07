@@ -8,6 +8,6 @@ itsdangerous==1.1.0
 Jinja2==3.1.6
 Markdown==3.8.1
 MarkupSafe==1.1.1
-Pygments==2.15.0
+Pygments==2.20.0
 webassets==2.0
 werkzeug>=1.0.1
