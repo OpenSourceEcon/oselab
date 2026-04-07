@@ -18,8 +18,8 @@ import jinja2
 import markdown as md_lib
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-TEMPLATES_DIR = os.path.join(ROOT, "oselab", "templates")
-STATIC_DIR = os.path.join(ROOT, "oselab", "static")
+TEMPLATES_DIR = os.path.join(ROOT, "templates")
+STATIC_DIR = os.path.join(ROOT, "static")
 SITE_DIR = os.path.join(ROOT, "site")
 
 # ---------------------------------------------------------------------------
