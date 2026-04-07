@@ -8,3 +8,5 @@ When you have updated the code for the site in the repository on your local mach
 - In your browser, open http://localhost:8000
 - Run `python build.py` if you have made template changes
 - Refresh browser window after any changes
+
+Once you are done using the site on the local server, close the browser window and terminate the browser in your terminal using `CMD-c`.
