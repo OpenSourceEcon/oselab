@@ -15,13 +15,3 @@ env/
 
 # macOS
 .DS_Store
-
-# Generated static site output (built by build.py, deployed via GitHub Actions)
-# Keep: site/CNAME, site/.nojekyll
-site/*.html
-site/about/
-site/faq/
-site/bootcamp/
-site/gallery/
-site/tutorials/
-site/assets/
