@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.main{
+  background-color: #F0F0F0;
+  width: 600px;
+  border: 0px;
+  padding: 100px;
+  margin: 0px;
+  margin-left: 275px
+}
+
+.button {
+  background-color: #D5D5D5;
+  border: none;
+  color: black;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 22px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.button:hover {opacity: 1}
+header {
+  margin: 0;
+  background-color: #8B0021;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0px;
+}
+html,body {
+margin:0;
+padding:0;
+}
+</style>
+</head>
+
+
+<body bgcolor="#C0C0C0">
+<header><h1><center>
+  <img src="universityofchicago_logo.png" alt="UChicago Logo" width="250" hspace="0" vertical-align: top;>
+</center></h1></header>
+
+<div class="main">
+
+<p align="center">
+<center>
+<a href="6_prefsurvey2.htm", class="button button2", id="fbutton">>></a>
+</center>
+
+<script>
+  var button = document.getElementById("fbutton");
+  var counter = 10;
+  var newElement = document.createElement("p");
+  newElement.innerHTML = "You can proceed to next survey in 0m 10s.";
+  var id;
+
+  button.parentNode.replaceChild(newElement, button);
+  id = setInterval(function() {
+      counter--;
+      if(counter < 0) {
+          newElement.parentNode.replaceChild(button, newElement);
+          clearInterval(id);
+      } else {
+          minutes = Math.floor(counter / 60);
+          seconds = counter % 60;
+          newElement.innerHTML = "You can proceed to next survey in " + minutes.toString() + "m " + seconds.toString() + "s.";
+      }
+  }, 1000);
+
+</script>
+</p>
+</div> 
+</body>
+</html>
+
+

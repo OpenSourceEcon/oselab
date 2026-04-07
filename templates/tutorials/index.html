@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/tutorials/index.css') }}">
+
+{{
+  page_heading(
+    title="Tutorials",
+  )
+}}
+
+<div class="container py-4">
+  {{
+    tutorials_item(
+      title="Git and GitHub Use, Collaboration, and Workflow",
+      body="""
+      This tutorial teaches basic and advanced topics in using Git and GitHub,
+      covers open source repository managment best practices, and models power
+      user text editor configuration. This tutorial also has exercises to give
+      hands-on Git and GitHub practice.
+      """,
+      url="https://pslmodels.github.io/Git-Tutorial/",
+      image=url_for('static', filename='images/GitFlowDiag.png'),
+    )
+  }}
+</div>
+
+{% endblock %}

@@ -1,8 +1,10 @@
-# `oselab`
+# `OSElab.org: Open Source Economics Laboratory website`
 
-Open Source Economics Laboratory (OSE Lab) Webpage built in [Flask](http://flask.pocoo.org).
+This is the repository fo the Open Source Economics Laboratory (OSE Lab) static website, updated through GitHub Actions from the content in this repository. We have archived the old dynamic site source in the `archive-dynamic-2026-04-06` branch of the repository.
 
-## Getting started
+## Put new cotent here
+
+<!-- ## Getting started
 
 As a prerequisite, you will need conda installed to help manage your environment.
 
@@ -23,4 +25,4 @@ The app will run locally at `localhost:5000`.
 
 ## Running tests
 
-To run the test suite, make sure you have installed the oselab package by running `pip install -e .`. Then run `python oselab/tests/views_test.py` from the repo root.
+To run the test suite, make sure you have installed the oselab package by running `pip install -e .`. Then run `python oselab/tests/views_test.py` from the repo root. -->
